@@ -12,6 +12,9 @@
 <link rel="shortcut icon" type="image/png" href="/assets/branding/chrono-breach-icon-32-v1.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/chrono-breach-icon-180-v1.png" />
 <link rel="manifest" href="/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,400..900&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet" />
 <style>
 :root{--cy:#57e9ff;--pk:#ff3df2;--gd:#ffd85d;--rd:#ff4757;--pp:#a76cff;--gn:#59ff9c;--or:#ff9a3d}
 *{box-sizing:border-box}
@@ -103,15 +106,8 @@ button{font-family:inherit}
 .screen.on{display:grid;place-items:center}
 .dim{background:radial-gradient(circle at 50% 45%,rgba(7,21,40,.6),rgba(1,2,7,.88))}
 .panel{width:min(880px,94vw);padding:34px 38px}
-/* landing */
+/* landing (see THE CHRONO PLATE block lower in this file) */
 #menu{place-items:stretch;background:transparent}
-.hero{position:relative;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 7vw}
-.topbar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:flex-end;align-items:center;gap:16px;padding:16px 24px}
-.pilot{display:flex;align-items:center;gap:8px;font-weight:900;font-size:13px;letter-spacing:.08em}
-.pilot .av{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#42ddff,#7d69ff);display:grid;place-items:center;font-size:13px;color:#04101a}
-.cur{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#cfe6f5;background:rgba(10,20,38,.6);border:1px solid rgba(70,130,180,.3);border-radius:99px;padding:6px 14px}
-.gear{pointer-events:auto;cursor:pointer;background:rgba(10,20,38,.6);border:1px solid rgba(70,130,180,.3);border-radius:10px;padding:7px 10px;color:#cfe6f5;font-size:15px}
-.gear:hover{border-color:var(--cy)}
 .cloudBox{margin-top:18px;padding:14px;border:1px solid rgba(87,233,255,.28);border-radius:12px;background:rgba(5,15,28,.55)}
 .cloudHead{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:11px;font-weight:900;letter-spacing:.13em;color:var(--cy)}
 .cloudStatus{font-size:10px;color:#ffd85d}.cloudIdentity{font-size:13px;font-weight:900;margin:10px 0;color:#fff}
@@ -119,27 +115,7 @@ button{font-family:inherit}
 .cloudActions .btn{padding:9px 12px;font-size:10px}.recoveryCode{margin-top:10px;font:800 12px monospace;color:#ffd85d;overflow-wrap:anywhere}
 .pilotSetup{width:min(520px,92vw);padding:42px;text-align:center}.pilotSetupMark{font-size:11px;font-weight:1000;letter-spacing:.25em;color:var(--cy);margin-bottom:12px}.pilotSetup h2{margin:0;font-size:clamp(30px,5vw,48px);letter-spacing:.08em}.pilotSetup p{color:#9db1c7;line-height:1.65;margin:14px auto 24px;max-width:410px}.pilotSetup input{width:min(330px,100%);background:#071322;border:1px solid rgba(87,233,255,.5);border-radius:10px;color:#fff;padding:14px 18px;font:900 15px inherit;letter-spacing:.13em;text-align:center;text-transform:uppercase;outline:none}.pilotSetup input:focus{border-color:var(--cy);box-shadow:0 0 22px rgba(87,233,255,.2)}.pilotSetup .btnRow{margin-top:18px}.pilotSetupNote{min-height:18px;margin-top:14px;color:#ffd85d;font-size:10px;font-weight:900;letter-spacing:.08em}
 .liveAnnouncement{position:fixed;z-index:30;top:12px;left:50%;transform:translateX(-50%);width:min(720px,92vw);display:none;align-items:center;gap:14px;padding:11px 14px;background:rgba(7,19,34,.96);border:1px solid var(--cy);border-radius:10px;box-shadow:0 10px 35px #0009;color:#dff8ff;font-size:12px}.liveAnnouncement.on{display:flex}.liveAnnouncement.warning{border-color:var(--gd)}.liveAnnouncement.critical{border-color:var(--rd)}.liveAnnouncement.success{border-color:var(--gn)}.liveAnnouncement b{white-space:nowrap;letter-spacing:.1em}.liveAnnouncement span{flex:1;color:#a9c5d6}.liveAnnouncement button{padding:3px 7px;background:none;color:#fff;box-shadow:none}
-.title{font-size:clamp(46px,8vw,110px);font-weight:1000;letter-spacing:.04em;line-height:.9;margin:0;text-shadow:0 0 40px rgba(70,225,255,.4)}
-.title em{font-style:normal;color:var(--cy)}
-.tagline{margin-top:14px;font-size:clamp(13px,1.6vw,18px);font-weight:900;letter-spacing:.34em;color:#9fd8ef}
-.tag{margin-top:14px;max-width:560px;color:#aebfd3;font-size:clamp(12px,1.2vw,15px);line-height:1.65}
-.menuBtns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
-.menuBtns2{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
-.menuBtns2 .btn{padding:10px 18px;font-size:11px}
-#btnEndless{position:relative}
-.menuBtns #btnEndless{padding:14px 26px;font-size:14px;min-width:210px}
-#btnEndless:not(:disabled){border-color:rgba(194,114,255,.68);color:#f3e8ff;background:linear-gradient(90deg,rgba(93,45,165,.38),rgba(255,61,242,.17));box-shadow:0 0 24px rgba(194,114,255,.16),inset 0 0 22px rgba(194,114,255,.04)}
-#btnEndless:not(:disabled):hover{border-color:#d79bff;filter:brightness(1.1);box-shadow:0 0 34px rgba(194,114,255,.27)}
-#btnEndless:disabled{opacity:.58;border-color:rgba(110,88,135,.34);background:rgba(25,18,36,.58);color:#857395}
-#btnEndless.endlessReady::after{content:'TITAN BUILD';margin-left:7px;padding:2px 6px;border-radius:999px;border:1px solid rgba(255,216,93,.38);color:#ffd85d;font-size:8px;letter-spacing:.08em}
-@media(max-width:720px){.menuBtns #btnEndless{min-width:0;flex:1 1 210px}}
-
-.feats{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
-.feat{display:flex;gap:10px;align-items:center;max-width:190px}
-.feat .fi{width:38px;height:38px;flex:none;border-radius:10px;background:rgba(20,45,75,.6);border:1px solid rgba(87,233,255,.35);display:grid;place-items:center;color:var(--cy)}
-.feat .fi svg{width:20px;height:20px}
-.feat b{display:block;font-size:11px;letter-spacing:.12em}
-.feat span{font-size:10px;color:#8aa5bd;line-height:1.35;display:block}
+.panel{width:min(880px,94vw);padding:34px 38px}
 /* leaderboard */
 .lbTable{width:100%}
 .lbRow{display:grid;grid-template-columns:44px 1fr 70px 110px;gap:8px;padding:8px 10px;font-size:13px;border-radius:8px;color:#aebfd3;align-items:center}
@@ -263,7 +239,7 @@ h2.pTitle{margin:0 0 4px;font-size:clamp(20px,2.6vw,30px);font-weight:1000;lette
 .tutorialAbility{border:1px solid #1d3851;border-radius:12px;padding:14px 10px;background:#07111f}.tutorialAbility b{display:inline-grid;place-items:center;min-width:42px;height:32px;padding:0 8px;border:1px solid rgba(87,233,255,.5);border-radius:7px;color:var(--cy);font-size:13px}.tutorialAbility span{display:block;margin-top:9px;font-size:10px;font-weight:900;letter-spacing:.12em;color:#fff}.tutorialAbility small{display:block;color:#7896ac;font-size:9px;line-height:1.4;margin-top:4px}
 .tutorialMobileGlyph{display:none;font-size:64px;margin:22px 0 8px;filter:drop-shadow(0 0 16px rgba(87,233,255,.35))}
 @media(max-width:600px){.tutorialPanel{padding:22px 16px}.tutorialStage{min-height:260px}.tutorialCopy{font-size:13px}.abilityStrip{grid-template-columns:1fr}.tutorialAbility{padding:10px}.howGrid{grid-template-columns:1fr}.tutorialKeys{transform:scale(.88);margin:18px 0}.touchDevice .tutorialKeys{display:none}.touchDevice .tutorialMobileGlyph{display:block}.holdTarget{width:116px;height:116px}}
-@media(max-width:860px){.smapWrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.feats{display:none}.bc{display:none}.br{right:10px;bottom:10px}.tl{width:44vw}.hero{padding:0 6vw}}
+@media(max-width:860px){.smapWrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.bc{display:none}.br{right:10px;bottom:10px}.tl{width:44vw}}
 
 /* ==================== MOBILE TOUCH CONTROLS ==================== */
 html,body{overscroll-behavior:none;-webkit-user-select:none;user-select:none}
@@ -432,35 +408,151 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 @media(max-width:860px){.loadoutPanel{padding:20px 18px}.skillSlotGrid{grid-template-columns:1fr}.equippedShardSlots{grid-template-columns:1fr 1fr 1fr}.loadoutFooter{margin:18px -18px -20px;padding-left:18px;padding-right:18px;bottom:-20px}.loadoutTop{align-items:center}.loadoutGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.loadoutPanel{max-height:100vh;width:100vw;border-radius:0;padding:16px 12px}.loadoutGrid,.skillGrid{grid-template-columns:1fr}.equippedShardSlots{grid-template-columns:1fr}.loadoutFooter{margin:16px -12px -16px;padding:12px;bottom:-16px;flex-direction:column;align-items:stretch}.loadoutActions{justify-content:stretch}.loadoutActions .btn{flex:1}.loadoutTop{align-items:flex-start}.loadoutWallet{font-size:11px}}
 
-/* ==================== PROFESSIONAL LAUNCH SCREEN ==================== */
-#menu{overflow:auto;background:linear-gradient(90deg,rgba(2,5,12,.96) 0%,rgba(2,6,14,.86) 48%,rgba(2,5,12,.64) 100%);isolation:isolate}
-#menu::before{content:'';position:absolute;inset:0;z-index:-4;background:radial-gradient(circle at 73% 40%,rgba(92,54,210,.22),transparent 28%),radial-gradient(circle at 82% 55%,rgba(24,194,230,.14),transparent 36%),linear-gradient(115deg,transparent 43%,rgba(87,233,255,.035) 43.2%,transparent 43.5%)}
-.launchGrid{position:absolute;z-index:-3;inset:0;opacity:.24;background-image:linear-gradient(rgba(87,233,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(87,233,255,.09) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,transparent 3%,#000 55%,transparent)}
-.launchGrid::after{content:'';position:absolute;right:7%;top:17%;width:min(44vw,590px);aspect-ratio:1;border:1px solid rgba(87,233,255,.12);border-radius:50%;box-shadow:0 0 0 70px rgba(87,233,255,.025),0 0 0 140px rgba(167,108,255,.018)}
-.launchOrb{position:absolute;z-index:-2;border-radius:50%;filter:blur(2px);pointer-events:none}.orbOne{width:380px;height:380px;right:15%;top:18%;border:1px solid rgba(87,233,255,.2);box-shadow:inset 0 0 80px rgba(87,233,255,.04),0 0 90px rgba(87,233,255,.05);animation:launchFloat 8s ease-in-out infinite}.orbTwo{width:12px;height:12px;right:11%;top:28%;background:var(--pk);box-shadow:0 0 30px 8px rgba(255,61,242,.35);animation:launchFloat 5s ease-in-out infinite reverse}@keyframes launchFloat{50%{transform:translateY(-14px) scale(1.02)}}
-.launchShell{width:min(1500px,100%);min-height:100%;margin:auto;padding:24px clamp(24px,4vw,68px) 20px;display:flex;flex-direction:column}
-.launchHeader{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:62px;border-bottom:1px solid rgba(113,162,199,.16);padding-bottom:17px}
-.launchLogo{display:flex;align-items:center;gap:12px;min-width:max-content}.launchLogoMark{position:relative;display:grid;place-items:center;width:43px;height:43px}.launchLogoMark::before{content:'';position:absolute;inset:2px;border:1px solid rgba(87,233,255,.25);border-radius:50%;box-shadow:0 0 24px rgba(87,233,255,.18)}.launchLogoMark img{position:relative;width:39px;height:39px;object-fit:contain;filter:drop-shadow(0 0 9px rgba(87,233,255,.35))}.launchLogo b,.launchLogo small{display:block}.launchLogo b{font-size:13px;letter-spacing:.16em}.launchLogo small{margin-top:4px;color:#58758d;font-size:7px;font-weight:900;letter-spacing:.23em}
-#menu .topbar{position:static;padding:0;justify-content:flex-end;gap:14px}#menu .pilot{padding-right:16px;border-right:1px solid rgba(110,155,190,.18)}#menu .pilot>span:last-child{display:grid;gap:3px}#menu .pilot small{font-size:7px;color:#58758d;letter-spacing:.18em}#menu .pilot b{max-width:270px;font-size:11px;color:#dff8ff}#menu .pilot .av{width:34px;height:34px;border-radius:9px;font-size:12px}
-.resourceStrip{display:flex;align-items:center;gap:7px}#menu .cur{display:grid;gap:3px;min-width:78px;border-radius:8px;padding:6px 10px;background:rgba(7,17,31,.72)}#menu .cur small{font-size:6px;color:#58758d;letter-spacing:.16em}#menu .cur span{font-size:10px;color:var(--gd)}#menu .cur b{font-size:11px;color:#eaf8ff}#menu .cur.core span{color:#ff806c}#menu .gear{width:38px;height:38px;padding:0;background:rgba(7,17,31,.74)}
-.launchMain{flex:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(340px,.62fr);gap:clamp(44px,7vw,110px);align-items:center;padding:clamp(38px,6vh,82px) 2vw clamp(28px,5vh,60px)}
-#menu .hero{position:relative;width:auto;height:auto;display:block;padding:0;max-width:780px}.heroEyebrow{display:flex;align-items:center;gap:10px;color:#78a5be;font-size:9px;font-weight:1000;letter-spacing:.25em}.heroEyebrow>span{width:35px;height:2px;background:var(--cy);box-shadow:0 0 12px var(--cy)}.heroEyebrow i{font-style:normal;color:var(--cy);border:1px solid rgba(87,233,255,.3);border-radius:99px;padding:3px 7px;font-size:7px;letter-spacing:.12em}
-#menu .title{margin:20px 0 0;font-size:clamp(62px,7.5vw,116px);line-height:.76;letter-spacing:-.045em;color:#f2f8fc;text-shadow:0 0 60px rgba(87,233,255,.13)}#menu .title em{font-weight:400;letter-spacing:-.13em;margin-left:.04em;color:var(--cy)}#menu .tagline{margin-top:24px;font-size:clamp(11px,1.2vw,15px);letter-spacing:.38em;color:#89cddd}#menu .tag{max-width:610px;margin-top:18px;color:#7890a4;font-size:13px;line-height:1.75}
-.brandLockup{position:relative;min-height:clamp(190px,22vw,285px);margin:8px 0 0;display:flex;align-items:center}.brandEmblem{position:absolute;left:clamp(-40px,-2.5vw,-12px);top:50%;width:clamp(210px,23vw,330px);aspect-ratio:1;transform:translateY(-50%);opacity:.94}.brandEmblem::before{content:'';position:absolute;inset:8%;border:1px solid rgba(87,233,255,.15);border-radius:50%;box-shadow:0 0 0 24px rgba(87,233,255,.018),0 0 85px rgba(85,63,255,.21)}.brandEmblem::after{content:'';position:absolute;inset:42%;border-radius:50%;background:#fff;box-shadow:0 0 18px #fff,0 0 55px var(--cy),0 0 90px var(--pk)}.brandEmblem img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 16px rgba(77,201,255,.22));animation:brandBreathe 5s ease-in-out infinite}.brandCopy{position:relative;z-index:2;margin-left:clamp(150px,16vw,230px);padding:14px 0;text-shadow:0 4px 28px #02050c}.brandKicker{display:flex;align-items:center;gap:9px;margin:0 0 9px;color:#8aa2b6;font-size:7px;font-weight:900;letter-spacing:.34em}.brandKicker::before{content:'';width:22px;height:1px;background:linear-gradient(90deg,var(--pk),var(--cy));box-shadow:0 0 8px var(--pk)}.brandTitle{position:relative;margin:0;display:flex;flex-direction:column;font-size:clamp(51px,5.9vw,88px);font-weight:1000;line-height:.72;letter-spacing:-.055em}.brandTitle span:first-child{color:#eafaff}.brandTitle span:last-child{margin-left:.42em;background:linear-gradient(90deg,#90dfff 0%,#a285ff 46%,#ff52cf 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.brandSlash{position:absolute;left:48%;top:49%;font-style:normal;color:#ff3cb9;font-size:.65em;letter-spacing:-.18em;text-shadow:0 0 24px rgba(255,42,186,.75);transform:translate(-50%,-50%) rotate(-7deg)}.brandSubline{display:flex;align-items:center;gap:10px;margin:15px 0 0;color:#68869b;font-size:7px;font-weight:900;letter-spacing:.38em}.brandSubline::after{content:'';width:52px;height:1px;background:linear-gradient(90deg,var(--cy),transparent)}@keyframes brandBreathe{50%{filter:drop-shadow(0 0 26px rgba(132,75,255,.4));transform:scale(1.018)}}
-/* Keep the hero wordmark visually centered in the space beside the emblem. */
-.brandCopy{margin-left:clamp(180px,18vw,270px)}
-.heroActions{display:flex;align-items:stretch;gap:11px;margin-top:30px;flex-wrap:wrap}.heroActions .btn{min-height:58px;border-radius:7px;padding:11px 18px;font-size:10px}.heroActions .playPrimary{justify-content:flex-start;min-width:250px;padding:10px 22px;color:#021016;box-shadow:0 12px 45px rgba(70,220,255,.2)}.playPrimary .playIcon{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:#041521;color:var(--cy);font-size:11px}.playPrimary span:last-child{display:grid;text-align:left;gap:3px;font-size:12px}.playPrimary small{font-size:7px;letter-spacing:.2em;opacity:.62}.heroActions #btnEndless{min-width:170px}.heroActions #btnEndless.endlessReady::after{position:absolute;right:7px;top:5px}
-.secondaryNav{display:flex;gap:24px;margin-top:22px;flex-wrap:wrap}.secondaryNav button{padding:4px 0;border:0;background:none;color:#758da2;font:900 9px inherit;letter-spacing:.14em;cursor:pointer;transition:.15s}.secondaryNav button span{margin-right:7px;color:#35546d}.secondaryNav button:hover{color:#e2f8ff}.secondaryNav button:hover span{color:var(--cy)}
-.commandDeck{position:relative;padding:20px;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,rgba(9,21,38,.88),rgba(4,10,21,.8));border-color:rgba(87,233,255,.2);box-shadow:0 30px 90px rgba(0,0,0,.35)}.commandDeck::before{content:'';position:absolute;left:0;top:0;width:36%;height:2px;background:linear-gradient(90deg,var(--cy),transparent);box-shadow:0 0 14px var(--cy)}.deckHead{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#7190a6;font-size:8px;font-weight:1000;letter-spacing:.18em}.deckHead i{display:flex;align-items:center;gap:6px;color:#67dca5;font-style:normal;font-size:7px}.deckHead i b{width:6px;height:6px;border-radius:50%;background:var(--gn);box-shadow:0 0 8px var(--gn)}
-.operationVisual{position:relative;height:112px;margin:18px -20px 13px;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle,rgba(87,233,255,.1),transparent 45%),linear-gradient(90deg,transparent,rgba(87,233,255,.035),transparent);border-block:1px solid rgba(87,233,255,.08)}.operationRing{width:78px;height:78px;display:grid;place-items:center;border:1px solid rgba(87,233,255,.46);border-radius:50%;box-shadow:0 0 0 13px rgba(87,233,255,.035),0 0 35px rgba(87,233,255,.12);animation:operationPulse 3s ease-in-out infinite}.operationRing::before,.operationRing::after{content:'';position:absolute;width:1px;height:112px;background:linear-gradient(transparent,rgba(87,233,255,.18),transparent)}.operationRing::after{transform:rotate(90deg)}.operationRing span{font-size:30px;color:var(--cy);text-shadow:0 0 18px var(--cy)}.operationScan{position:absolute;width:150px;height:150px;border:1px dashed rgba(167,108,255,.23);border-radius:50%;animation:operationSpin 14s linear infinite}@keyframes operationSpin{to{transform:rotate(360deg)}}@keyframes operationPulse{50%{transform:scale(1.05);filter:brightness(1.25)}}
-.operationMeta small{font-size:7px;color:#58758d;font-weight:1000;letter-spacing:.2em}.operationMeta h2{margin:5px 0 6px;font-size:21px;letter-spacing:.14em}.operationMeta p{margin:0;color:#6f879b;font-size:10px;line-height:1.5}.landingStats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:17px;background:rgba(87,233,255,.12);border:1px solid rgba(87,233,255,.08)}.landingStats>div{padding:10px;background:#07111f}.landingStats small,.landingStats b{display:block}.landingStats small{font-size:6px;color:#557185;letter-spacing:.12em}.landingStats b{margin-top:5px;font-size:11px;color:#d9f6ff}.landingStats .readyText{color:var(--gn)}
-.progressLabel{display:flex;justify-content:space-between;margin:14px 0 7px;color:#617e92;font-size:7px;font-weight:900;letter-spacing:.14em}.progressLabel b{color:var(--cy)}.landingProgress{height:3px;background:#101f2e;overflow:hidden}.landingProgress i{display:block;width:4%;height:100%;background:linear-gradient(90deg,var(--cy),#8170ff);box-shadow:0 0 10px var(--cy);transition:width .35s ease}
-.deckActions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:16px}.deckActions button{min-width:0;padding:10px 6px;border:1px solid rgba(82,126,160,.22);border-radius:6px;background:rgba(12,26,44,.68);color:#dcecf4;cursor:pointer;transition:.15s}.deckActions button:hover{border-color:var(--cy);background:rgba(87,233,255,.08);transform:translateY(-1px)}.deckActions span,.deckActions b,.deckActions small{display:block}.deckActions span{color:var(--cy);font-size:15px;margin-bottom:5px}.deckActions b{font-size:8px;letter-spacing:.12em}.deckActions small{margin-top:3px;color:#58758d;font-size:6px}.combatTip{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-top:13px;padding-top:12px;border-top:1px solid rgba(90,135,170,.13);font-size:7px;line-height:1.45}.combatTip b{color:var(--gd);letter-spacing:.12em}.combatTip span{color:#698195}
-.featureRail{display:flex;align-items:end;justify-content:space-between;gap:28px;border-top:1px solid rgba(113,162,199,.13);padding-top:15px}#menu .feats{display:flex;gap:24px;margin:0;flex-wrap:nowrap}#menu .feat{gap:8px;max-width:150px}#menu .feat .fi{width:27px;height:27px;border-radius:6px;background:rgba(12,27,46,.7)}#menu .feat .fi svg{width:14px;height:14px}#menu .feat b{font-size:7px;color:#a5bdcc}#menu .feat span{font-size:6px;color:#4e687c}.launchFootnote{white-space:nowrap;color:#3d596d;font-size:6px;font-weight:900;letter-spacing:.17em}
-@media(max-width:1050px){.launchMain{gap:36px;grid-template-columns:minmax(0,1fr) minmax(320px,.7fr)}#menu .feats .feat:nth-child(n+4){display:none}.launchFootnote{display:none}}
-@media(max-width:820px){#menu{overflow:auto}.launchShell{min-height:100%;padding:16px 18px}.launchHeader{align-items:flex-start}.launchLogo small{display:none}#menu .topbar{flex-wrap:wrap}.resourceStrip{order:3;width:100%;justify-content:flex-end}.launchMain{grid-template-columns:1fr;padding:42px 1vw}.commandDeck{max-width:620px}.featureRail{display:none}.brandLockup{max-width:680px}}
-@media(max-width:560px){.launchHeader{gap:10px}.launchLogo span:last-child{display:none}.launchLogoMark{width:38px;height:38px}#menu .pilot{border:0;padding:0}#menu .pilot b{max-width:150px}.resourceStrip{display:none}.launchMain{padding:30px 0 22px;gap:34px}.heroEyebrow{font-size:7px}.brandLockup{min-height:180px}.brandEmblem{left:-55px;width:230px;opacity:.66}.brandCopy{margin-left:91px}.brandTitle{font-size:clamp(44px,15vw,67px)}.brandSubline{letter-spacing:.2em}.brandSlash{left:50%}#menu .tagline{letter-spacing:.22em;line-height:1.5}#menu .tag{font-size:11px}.heroActions{display:grid;grid-template-columns:1fr}.heroActions .playPrimary,.heroActions #btnEndless{width:100%;min-width:0}.secondaryNav{gap:14px}.commandDeck{padding:16px}.operationVisual{margin-inline:-16px}.deckActions{grid-template-columns:1fr}.deckActions button{text-align:left;padding:10px 14px}.deckActions span,.deckActions b,.deckActions small{display:inline;margin:0 7px 0 0}.combatTip{grid-template-columns:1fr}.landingStats small{letter-spacing:.06em}.landingStats b{font-size:9px}}
-@media(max-height:720px) and (min-width:821px){.launchShell{padding-top:14px}.launchHeader{min-height:52px;padding-bottom:10px}.launchMain{padding:20px 2vw 16px}.operationVisual{height:86px}.operationRing{width:60px;height:60px}.operationScan{width:120px;height:120px}.brandLockup{min-height:180px}.brandEmblem{width:210px}.brandCopy{margin-left:195px}.brandTitle{font-size:55px}#menu .tagline{margin-top:12px}#menu .tag{margin-top:10px}.heroActions{margin-top:15px}.secondaryNav{margin-top:14px}.featureRail{padding-top:8px}}
+/* ==================== THE CHRONO PLATE — landing ==================== */
+#menu{--cb-paper:#edeae2;--cb-ink:#14161a;--cb-red:#c8331f;--cb-steel:#566067;--cb-line:rgba(20,22,26,.32);--cb-line2:rgba(20,22,26,.13);--cb-mono:'Fragment Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;--cb-disp:'Big Shoulders','Arial Narrow','Segoe UI',sans-serif;overflow:auto;background:var(--cb-paper);color:var(--cb-ink);font-variant-numeric:tabular-nums}
+#menu ::selection{background:var(--cb-red);color:#f6f1e6}
+#menu :focus{outline:none}
+#menu :focus-visible{outline:2px solid var(--cb-red);outline-offset:2px}
+#menu{scrollbar-width:thin;scrollbar-color:rgba(20,22,26,.4) transparent}
+#menu::-webkit-scrollbar{width:10px;height:10px}
+#menu::-webkit-scrollbar-thumb{background:rgba(20,22,26,.32);border:3px solid var(--cb-paper)}
+#menu::-webkit-scrollbar-track{background:transparent}
+.plateShell{width:min(1560px,100%);min-height:100%;margin:auto;padding:clamp(14px,2.4vh,26px) clamp(18px,3.4vw,56px) clamp(10px,1.8vh,18px);display:flex;flex-direction:column}
+.mHead{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1.5px solid var(--cb-ink)}
+.mBrand{display:flex;align-items:baseline;gap:12px;min-width:0}
+.mBrand b{font-family:var(--cb-disp);font-weight:800;font-size:19px;line-height:1;letter-spacing:.05em;white-space:nowrap}
+.mBrand b .sl{color:var(--cb-red);font-weight:600}
+.mBrand small{font-family:var(--cb-mono);font-size:8px;letter-spacing:.22em;color:var(--cb-steel);white-space:nowrap}
+#menu .topbar{position:static;padding:0;display:flex;align-items:center;justify-content:flex-end;gap:0;min-width:0}
+#menu .pilot{display:flex;align-items:center;gap:10px;padding-right:16px;border-right:1px solid var(--cb-line);font-size:11px}
+#menu .pilot .av{width:30px;height:30px;border-radius:2px;background:var(--cb-ink);color:var(--cb-paper);font-family:var(--cb-disp);font-weight:800;font-size:15px;display:grid;place-items:center}
+#menu .pilot>span:last-child{display:grid;gap:3px;min-width:0}
+#menu .pilot small{display:block;font-family:var(--cb-mono);font-size:8px;letter-spacing:.2em;color:var(--cb-steel)}
+#menu .pilot b{display:block;max-width:280px;font-family:var(--cb-mono);font-weight:400;font-size:11px;letter-spacing:.06em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#menu .titanBadge,#menu .paradoxBadge{border-radius:2px;font-family:var(--cb-mono);font-weight:400;text-shadow:none}
+#menu .titanBadge{border-color:rgba(200,51,31,.55);background:rgba(200,51,31,.06);color:var(--cb-red)}
+#menu .paradoxBadge{border-color:var(--cb-line);background:none;color:var(--cb-ink)}
+#menu .resourceStrip{display:flex;align-items:center}
+#menu .cur{display:grid;gap:3px;min-width:74px;padding:0 14px;border:0;border-right:1px solid var(--cb-line);border-radius:0;background:none}
+#menu .cur small{font-family:var(--cb-mono);font-size:7.5px;letter-spacing:.2em;color:var(--cb-steel)}
+#menu .cur span{font-family:var(--cb-mono);font-size:11px;color:var(--cb-ink)}
+#menu .gear{width:34px;height:34px;margin-left:14px;padding:0;border:1px solid var(--cb-line);border-radius:2px;background:none;color:var(--cb-ink);display:grid;place-items:center;cursor:pointer;transition:.15s}
+#menu .gear svg{width:15px;height:15px}
+#menu .gear:hover{border-color:var(--cb-ink);background:var(--cb-ink);color:var(--cb-paper)}
+.mMain{flex:1;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(400px,.92fr);gap:clamp(30px,4vw,72px);align-items:center;padding:clamp(20px,3.6vh,48px) 0 clamp(14px,2.4vh,28px)}
+.wordmark{margin:0;font-family:var(--cb-disp);font-weight:800;font-size:clamp(58px,9.2vh,6rem);line-height:.85;letter-spacing:.004em}
+.wordmark span{display:block}
+.wordmark .sl{display:inline;color:var(--cb-red);font-weight:600}
+.tagline{display:flex;align-items:center;gap:14px;margin-top:clamp(14px,2.4vh,24px);font-family:var(--cb-mono);font-size:clamp(10px,1.4vh,12px);letter-spacing:.32em;white-space:nowrap}
+.tagline::after{content:'';flex:1;height:1px;background:var(--cb-line2);min-width:30px}
+.lede{max-width:56ch;margin:clamp(10px,1.8vh,16px) 0 0;font-family:var(--cb-mono);font-size:clamp(11px,1.5vh,13px);line-height:1.75;color:var(--cb-steel)}
+.lede b{font-weight:400;color:var(--cb-ink)}
+.calFields{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--cb-line);background:var(--cb-line2);margin-top:clamp(16px,2.8vh,28px)}
+.calFields div{padding:9px 12px 10px;background:var(--cb-paper);min-width:0}
+.calFields small{display:block;font-family:var(--cb-mono);font-size:7.5px;letter-spacing:.18em;color:var(--cb-steel)}
+.calFields b{display:block;margin-top:4px;font-family:var(--cb-disp);font-weight:700;font-size:15px;line-height:1.1;letter-spacing:.05em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctaRow{display:flex;align-items:stretch;gap:10px;margin-top:clamp(18px,3.2vh,30px);flex-wrap:wrap}
+.stampBtn{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--cb-red);border-radius:2px;background:var(--cb-red);color:#f6f1e6;padding:0 clamp(18px,1.8vw,28px);min-height:56px;font-family:var(--cb-disp);font-weight:800;font-size:19px;letter-spacing:.1em;cursor:pointer;transition:background .15s ease,border-color .15s ease,transform .1s ease}
+.stampBtn svg{width:14px;height:14px;fill:currentColor;flex:none}
+.stampBtn:hover{background:#a82715;border-color:#a82715}
+.stampBtn:active{transform:translateY(1px)}
+.specBtn{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1.5px solid var(--cb-ink);border-radius:2px;background:transparent;color:var(--cb-ink);padding:0 24px;min-height:56px;font-family:var(--cb-disp);font-weight:700;font-size:15px;letter-spacing:.13em;cursor:pointer;transition:.15s;position:relative}
+.specBtn:hover:not(:disabled){background:var(--cb-ink);color:var(--cb-paper)}
+.specBtn.ng:not(:disabled){border-color:var(--cb-red);color:var(--cb-red)}
+.specBtn.ng:hover:not(:disabled){background:var(--cb-red);color:#f6f1e6}
+#btnEndless:not(:disabled){border-color:var(--cb-red);color:var(--cb-red)}
+#btnEndless:not(:disabled):hover{background:var(--cb-red);color:#f6f1e6}
+#btnEndless:disabled{border:1px dashed var(--cb-line);color:var(--cb-steel);cursor:not-allowed}
+#btnEndless:disabled::after{content:'LOCKED';position:absolute;top:-7px;right:10px;padding:0 6px;background:var(--cb-paper);font-family:var(--cb-mono);font-size:7.5px;letter-spacing:.22em;color:var(--cb-steel)}
+#btnEndless.endlessReady:not(:disabled)::after{content:'TITAN BUILD';top:-7px;right:10px;border:1px solid rgba(200,51,31,.5);color:var(--cb-red);background:var(--cb-paper);padding:1px 6px}
+.idxNav{display:flex;gap:26px;margin-top:clamp(14px,2.4vh,22px);flex-wrap:wrap}
+.idxNav button{padding:2px 0;border:0;border-bottom:1px solid transparent;background:none;cursor:pointer;font-family:var(--cb-mono);font-size:10px;letter-spacing:.2em;color:var(--cb-steel);transition:.15s}
+.idxNav button:hover{color:var(--cb-ink);border-bottom-color:var(--cb-red)}
+.figPlate{position:relative;display:flex;flex-direction:column;margin:0;border:1px solid var(--cb-ink);outline:1px solid var(--cb-line2);outline-offset:4px;background:var(--cb-paper)}
+.figHead{display:flex;justify-content:space-between;gap:12px;padding:9px 13px;border-bottom:1px solid var(--cb-ink);font-family:var(--cb-mono);font-size:8px;letter-spacing:.22em;color:var(--cb-steel)}
+.figHead b{font-weight:400;color:var(--cb-ink)}
+.figBody{flex:1;min-height:0;display:grid;background-image:linear-gradient(var(--cb-line2) 1px,transparent 1px),linear-gradient(90deg,var(--cb-line2) 1px,transparent 1px);background-size:26px 26px;background-position:center bottom}
+.exploded{display:block;width:100%;max-height:min(56vh,470px);margin:auto;color:var(--cb-ink)}
+.exploded .pl{stroke:var(--cb-ink);fill:none;stroke-width:1.5;stroke-linejoin:miter;stroke-linecap:butt}
+.exploded .pl2{stroke:var(--cb-ink);fill:none;stroke-width:.8;opacity:.5}
+.exploded .axis{stroke:var(--cb-ink);fill:none;stroke-width:1;opacity:.35;stroke-dasharray:12 5 2 5}
+.exploded .hatch{stroke:var(--cb-ink);stroke-width:.7;opacity:.45}
+.exploded .lead{stroke:var(--cb-steel);stroke-width:.8;fill:none;opacity:.85}
+.exploded .dnum{font-family:var(--cb-mono);font-size:10px;fill:var(--cb-red);letter-spacing:.06em}
+.exploded .dlab{font-family:var(--cb-mono);font-size:10.5px;fill:var(--cb-ink);letter-spacing:.04em}
+.exploded .dsub{font-family:var(--cb-mono);font-size:8px;fill:var(--cb-steel);letter-spacing:.1em}
+.exploded g.figRow{transition:opacity .18s ease}
+.exploded:hover g.figRow:not(:hover){opacity:.3}
+#coreHand line{stroke:var(--cb-red);stroke-width:2;stroke-linecap:round}
+#coreHand circle{fill:var(--cb-red)}
+.exploded .coreRed{transition:stroke .2s ease}
+.exploded.dilated .coreRed{stroke:var(--cb-red)}
+.figLegend{display:none;list-style:none;margin:0;padding:10px 13px 12px;border-top:1px solid var(--cb-line2);grid-template-columns:1fr 1fr;gap:7px 18px}
+.figLegend li{font-family:var(--cb-mono);font-size:9px;letter-spacing:.08em;color:var(--cb-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.figLegend li i{font-style:normal;color:var(--cb-red);margin-right:7px}
+.figLegend li small{color:var(--cb-steel);margin-left:6px}
+.console{border-top:1px solid var(--cb-ink)}
+.consoleFields{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:1px;background:var(--cb-line2);border-bottom:1px solid var(--cb-line2)}
+.consoleFields>div{background:var(--cb-paper);padding:8px 12px 9px;min-width:0}
+.consoleFields small{display:block;font-family:var(--cb-mono);font-size:7.5px;letter-spacing:.2em;color:var(--cb-steel)}
+.consoleFields b{display:block;margin-top:3px;font-family:var(--cb-mono);font-weight:400;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.consoleFields .stab{grid-column:1/-1}
+.consoleFields .stab b{display:inline}
+.stabBar{display:block;height:3px;margin-top:7px;background:var(--cb-line2)}
+.stabBar i{display:block;width:4%;height:100%;background:var(--cb-red);transition:width .4s ease}
+.consoleBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cb-line2);border-bottom:1px solid var(--cb-line2)}
+.consoleBtns button{border:0;background:var(--cb-paper);padding:11px 12px 12px;text-align:left;cursor:pointer;transition:.15s;min-width:0}
+.consoleBtns button b{display:block;font-family:var(--cb-mono);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--cb-ink)}
+.consoleBtns button small{display:block;margin-top:3px;font-family:var(--cb-mono);font-size:8px;letter-spacing:.04em;color:var(--cb-steel)}
+.consoleBtns button:hover{background:var(--cb-ink)}
+.consoleBtns button:hover b{color:var(--cb-paper)}
+.consoleBtns button:hover small{color:rgba(237,234,226,.62)}
+.intel{display:flex;gap:10px;align-items:baseline;padding:9px 12px 10px;font-family:var(--cb-mono);font-size:8.5px;line-height:1.5;letter-spacing:.06em;color:var(--cb-steel)}
+.intel b{font-weight:400;letter-spacing:.22em;color:var(--cb-red);white-space:nowrap}
+.mFoot{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1.5px solid var(--cb-ink);padding-top:11px}
+#menu .feats{display:flex;align-items:center;gap:clamp(14px,2vw,30px);margin:0;flex-wrap:nowrap;min-width:0}
+#menu .feat{display:flex;gap:9px;align-items:center;max-width:180px;min-width:0}
+#menu .feat .fi{width:24px;height:24px;flex:none;border:1px solid var(--cb-line);border-radius:2px;background:none;color:var(--cb-ink);display:grid;place-items:center}
+#menu .feat .fi svg{width:13px;height:13px}
+#menu .feat b{display:block;font-family:var(--cb-mono);font-weight:400;font-size:8px;letter-spacing:.14em;color:var(--cb-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#menu .feat span{display:block;font-family:var(--cb-mono);font-size:7.5px;color:var(--cb-steel);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mFootNote{flex:none;font-family:var(--cb-mono);font-size:7.5px;letter-spacing:.18em;color:var(--cb-steel)}
+@media(prefers-reduced-motion:no-preference){
+  .exploded .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:cbDraw .9s cubic-bezier(.22,.61,.36,1) forwards;animation-delay:var(--d,0s)}
+  @keyframes cbDraw{to{stroke-dashoffset:0}}
+}
+@media(max-width:1180px){.mMain{grid-template-columns:minmax(0,1fr) minmax(340px,.82fr)}#menu .feats .feat:nth-child(n+4){display:none}.mFootNote{display:none}}
+@media(max-width:920px){.mMain{grid-template-columns:1fr;gap:36px}.figPlate{max-width:680px}}
+@media(max-width:820px){.mHead{align-items:flex-start}#menu .pilot b{max-width:150px}}
+@media(max-width:680px){
+  .mBrand small{display:none}
+  #menu .pilot{padding-right:10px}
+  #menu .cur{min-width:0;padding:0 10px}
+  .mMain{gap:30px}
+  .calFields{grid-template-columns:repeat(2,1fr)}
+  .calFields div:nth-child(2n){border-right:0}
+  .ctaRow{margin-top:20px}
+  .stampBtn{width:100%}
+  .specBtn{flex:1 1 44%}
+  .exploded .dnum,.exploded .dlab,.exploded .dsub,.exploded .lead{display:none}
+  .exploded{max-height:none}
+  .figLegend{display:grid}
+  .consoleFields{grid-template-columns:1fr 1fr}
+  .mFoot{flex-direction:column;align-items:flex-start;gap:10px}
+  #menu .feats{flex-wrap:wrap;gap:12px}
+  #menu .feat span{display:none}
+}
+@media(max-height:820px) and (min-width:921px){
+  .mMain{padding-top:14px;padding-bottom:12px;gap:clamp(24px,3vw,44px)}
+  .wordmark{font-size:clamp(52px,9.6vh,6rem)}
+  .tagline{margin-top:10px}
+  .lede{margin-top:8px;line-height:1.6}
+  .calFields{margin-top:12px}
+  .ctaRow{margin-top:14px}
+  .idxNav{margin-top:12px}
+  .exploded{max-height:min(46vh,400px)}
+  #menu .feat span{display:none}
+}
 
 /* ==================== FOUNDRY + LOADOUT COMMAND UI ==================== */
 #shopPanel,#loadoutPanel{background:radial-gradient(circle at 82% 12%,rgba(88,58,190,.13),transparent 32%),linear-gradient(130deg,rgba(2,6,14,.92),rgba(3,9,19,.84));padding:20px}
@@ -596,71 +688,139 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
   </div>
 </div>
 <div id="menu" class="screen on">
-  <div class="launchGrid" aria-hidden="true"></div>
-  <div class="launchOrb orbOne" aria-hidden="true"></div><div class="launchOrb orbTwo" aria-hidden="true"></div>
-  <div class="launchShell">
-    <header class="launchHeader">
-      <div class="launchLogo"><span class="launchLogoMark"><img src="/assets/branding/chrono-breach-icon-48-v1.png" width="48" height="48" alt=""></span><span><b>CHRONO//BREACH</b><small>LIVE COMBAT NETWORK</small></span></div>
+  <div class="plateShell">
+    <header class="mHead">
+      <div class="mBrand"><b>CHRONO<span class="sl">//</span>BREACH</b><small>TEMPORAL STRIKE DIRECTIVE · PLATE Nº CB-2 · V2.0</small></div>
       <div class="topbar">
         <div class="pilot"><span class="av" id="avInit">A</span><span><small>ACTIVE PILOT</small><b id="pilotTag">ANON</b></span></div>
         <div class="resourceStrip">
-          <div class="cur"><small>CREDITS</small><span>◉ <b id="mCredits">0</b></span></div>
-          <div class="cur"><small>SHARDS</small><span>◆ <b id="mShards">0</b></span></div>
-          <div class="cur core"><small>CORES</small><span>▲ <b id="mCores">0</b></span></div>
+          <div class="cur"><small>CREDITS</small><span><b id="mCredits">0</b></span></div>
+          <div class="cur"><small>SHARDS</small><span><b id="mShards">0</b></span></div>
+          <div class="cur core"><small>TITAN CORES</small><span><b id="mCores">0</b></span></div>
         </div>
-        <button class="gear" id="gearBtn" type="button" aria-label="Open settings">⚙</button>
+        <button class="gear" id="gearBtn" type="button" aria-label="Open settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2.1" fill="var(--cb-paper)"/><circle cx="15" cy="12" r="2.1" fill="var(--cb-paper)"/><circle cx="7" cy="17" r="2.1" fill="var(--cb-paper)"/></svg></button>
       </div>
     </header>
 
-    <main class="launchMain">
-      <section class="hero">
-        <div class="heroEyebrow"><span></span> ONLINE ARENA ROGUELITE <i>V2.0</i></div>
-        <div class="brandLockup">
-          <div class="brandEmblem" aria-hidden="true"><img src="/assets/branding/chrono-breach-icon-512-v1.png" width="512" height="512" alt="" decoding="async" fetchpriority="high"></div>
-          <div class="brandCopy">
-            <div class="brandKicker">TEMPORAL STRIKE DIRECTIVE</div>
-            <h1 class="brandTitle" aria-label="Chrono Breach"><span>CHRONO</span><i class="brandSlash">//</i><span>BREACH</span></h1>
-            <div class="brandSubline">TEMPORAL SCI-FI ACTION</div>
-          </div>
-        </div>
+    <main class="mMain">
+      <section class="titleCol">
+        <h1 class="wordmark" aria-label="Chrono Breach"><span>CHRONO<i class="sl">//</i></span><span>BREACH</span></h1>
         <div class="tagline">WEAPONIZE TIME. OUTRUN THE END.</div>
-        <p class="tag">Enter a collapsing timeline where every dash, parry, and upgrade changes the fight. Build your ship, break five hostile sectors, and challenge the entities beyond time.</p>
-        <div class="heroActions">
-          <button class="btn playPrimary" id="btnPlay"><span class="playIcon">▶</span><span><small>BEGIN OPERATION</small>ENTER THE BREACH</span></button>
-          <button class="btn ghost endlessLandingBtn" id="btnEndless" disabled title="Defeat Chronos Titan to unlock Endless Mode">🔒&nbsp; ENDLESS MODE</button>
-          <button class="btn ghost" id="btnNGPlus" style="display:none">◈&nbsp; NEW GAME+</button>
+        <p class="lede">Enter a collapsing timeline where every dash, parry, and upgrade changes the fight. Build your ship, break <b>five hostile sectors</b>, and challenge the entities beyond time.</p>
+        <div class="calFields">
+          <div><small>CLASS</small><b>ARENA ROGUELITE</b></div>
+          <div><small>CAMPAIGN</small><b>05 SECTORS · 06 BOSSES</b></div>
+          <div><small>BUILD SYSTEM</small><b>26 UPGRADES · 04 RARITIES</b></div>
+          <div><small>SHIP</small><b>05 EVOLUTION TIERS</b></div>
+          <div><small>HANGAR</small><b>16 MODULES · 08 SHARDS</b></div>
+          <div><small>RECORDS</small><b>OFFLINE + CLOUD</b></div>
         </div>
-        <div class="secondaryNav">
-          <button id="btnMap"><span>01</span> SECTOR MAP</button>
-          <button id="btnLb"><span>02</span> LEADERBOARD</button>
-          <button id="btnHow"><span>03</span> HOW TO PLAY</button>
+        <div class="ctaRow">
+          <button class="stampBtn" id="btnPlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 19 12 7 19.5Z"/></svg><span>ENTER THE BREACH</span></button>
+          <button class="specBtn endlessLandingBtn" id="btnEndless" disabled title="Defeat Chronos Titan to unlock Endless Mode">ENDLESS MODE</button>
+          <button class="specBtn ng" id="btnNGPlus" style="display:none">NEW GAME+</button>
         </div>
+        <nav class="idxNav" aria-label="Landing navigation">
+          <button id="btnMap">SECTOR MAP</button>
+          <button id="btnLb">LEADERBOARD</button>
+          <button id="btnHow">HOW TO PLAY</button>
+        </nav>
       </section>
 
-      <aside class="commandDeck glass">
-        <div class="deckHead"><span>ACTIVE OPERATION</span><i><b></b> NETWORK ONLINE</i></div>
-        <div class="operationVisual"><div class="operationRing"><span>⌁</span></div><div class="operationScan"></div></div>
-        <div class="operationMeta"><small>CURRENT FRONT</small><h2 id="landingOperation">OUTER RIM</h2><p>Hostile temporal signatures detected. Configure your ship before deployment.</p></div>
-        <div class="landingStats">
-          <div><small>BEST SCORE</small><b id="landingBest">0</b></div>
-          <div><small>SECTOR ACCESS</small><b id="landingSector">01 / 05</b></div>
-          <div><small>STATUS</small><b class="readyText">READY</b></div>
+      <figure class="figPlate">
+        <div class="figHead"><span><b>FIG. 1</b> — FIGHTER, STANDARD CONFIGURATION — EXPLODED VIEW</span><span>NOT TO SCALE</span></div>
+        <div class="figBody">
+          <svg class="exploded" viewBox="0 0 680 590" aria-label="Exploded technical diagram of the pilot ship with its labeled combat systems">
+            <path class="axis draw" style="--d:.05s" pathLength="1" d="M240 18 V572"/>
+            <!-- 01 CHRONO CORE -->
+            <g class="figRow" data-dilate>
+              <circle class="pl coreRed draw" style="--d:.1s" pathLength="1" cx="240" cy="84" r="46"/>
+              <circle class="pl2" cx="240" cy="84" r="41" stroke-width="7" stroke-dasharray="1.2 3.093"/>
+              <circle class="pl2 draw" style="--d:.18s" pathLength="1" cx="240" cy="84" r="30"/>
+              <circle cx="240" cy="84" r="5.5" fill="currentColor"/>
+              <g id="coreHand"><line x1="240" y1="84" x2="240" y2="51"/><line x1="240" y1="84" x2="240" y2="94" stroke-width="1.4"/><circle cx="240" cy="84" r="2.6"/></g>
+              <path class="lead" d="M286 84 L392 60 H397"/>
+              <text class="dnum" x="403" y="56">01</text><text class="dlab" x="429" y="56">CHRONO CORE</text>
+              <text class="dsub" x="429" y="69">TIME SKILLS [Q] · HOVER TO DILATE</text>
+            </g>
+            <!-- 02 HULL PLATE -->
+            <g class="figRow">
+              <path class="axis" d="M138 242 H342"/>
+              <path class="pl draw" style="--d:.22s" pathLength="1" d="M240 168 L258 199 L288 216 L322 260 L322 277 L296 299 L262 313 L240 317 L218 313 L184 299 L158 277 L158 260 L192 216 L222 199 Z"/>
+              <path class="pl2" d="M240 168 L258 199 L288 216 L322 260 L322 277 L296 299 L262 313 L240 317 L218 313 L184 299 L158 277 L158 260 L192 216 L222 199 Z" transform="translate(240 242.5) scale(.8) translate(-240 -242.5)"/>
+              <g class="hatch"><path d="M224 300l10 10M232 298l10 10M240 296l10 10M248 294l10 10"/></g>
+              <path class="lead" d="M322 268 L392 216 H397"/>
+              <text class="dnum" x="403" y="212">02</text><text class="dlab" x="429" y="212">HULL PLATE</text>
+              <text class="dsub" x="429" y="225">EVOLVES THROUGH 5 TIERS — SCOUT TO APEX</text>
+            </g>
+            <!-- 03 PRIMARY ARRAY -->
+            <g class="figRow">
+              <path class="axis" d="M186 398 H294"/>
+              <rect class="pl draw" style="--d:.34s" pathLength="1" x="218" y="391" width="44" height="14"/>
+              <rect class="pl draw" style="--d:.38s" pathLength="1" x="204" y="365" width="13" height="52"/>
+              <rect class="pl draw" style="--d:.42s" pathLength="1" x="263" y="365" width="13" height="52"/>
+              <path class="pl2" d="M204 371h13M263 371h13M204 411h13M263 411h13"/>
+              <path class="lead" d="M276 384 L392 330 H397"/>
+              <text class="dnum" x="403" y="326">03</text><text class="dlab" x="429" y="326">PRIMARY ARRAY</text>
+              <text class="dsub" x="429" y="339">SUSTAINED FIRE — HOLD LMB</text>
+            </g>
+            <!-- 04 PHASE VANES -->
+            <g class="figRow">
+              <path class="pl draw" style="--d:.48s" pathLength="1" d="M240 456 L190 482 L240 488 Z"/>
+              <path class="pl draw" style="--d:.52s" pathLength="1" d="M240 456 L290 482 L240 488 Z"/>
+              <path class="pl2" d="M240 463 L206 481 L240 485 Z M240 463 L274 481 L240 485 Z"/>
+              <path class="lead" d="M290 478 L392 424 H397"/>
+              <text class="dnum" x="403" y="420">04</text><text class="dlab" x="429" y="420">PHASE VANES</text>
+              <text class="dsub" x="429" y="433">PHASE DASH — SPACE</text>
+            </g>
+            <!-- 05 TACTICAL BAY -->
+            <g class="figRow">
+              <rect class="pl draw" style="--d:.58s" pathLength="1" x="206" y="512" width="68" height="27"/>
+              <rect class="pl2" x="216" y="519" width="14" height="13"/>
+              <rect class="pl2" x="236" y="519" width="14" height="13"/>
+              <rect class="pl2" x="256" y="519" width="14" height="13"/>
+              <path class="lead" d="M274 525 L392 490 H397"/>
+              <text class="dnum" x="403" y="486">05</text><text class="dlab" x="429" y="486">TACTICAL BAY</text>
+              <text class="dsub" x="429" y="499">PARRY · PULSE · BURST · BLINK — E</text>
+            </g>
+            <!-- 06 DRIVE NOZZLE -->
+            <g class="figRow">
+              <path class="pl draw" style="--d:.64s" pathLength="1" d="M224 556 H256 L250 582 H230 Z"/>
+              <path class="pl2" d="M232 561 H248 L244 577 H236 Z"/>
+              <path class="lead" d="M256 569 L392 552 H397"/>
+              <text class="dnum" x="403" y="548">06</text><text class="dlab" x="429" y="548">DRIVE NOZZLE</text>
+              <text class="dsub" x="429" y="561">EVASIVE THRUST</text>
+            </g>
+          </svg>
+          <ul class="figLegend">
+            <li><i>01</i>CHRONO CORE<small>[Q]</small></li>
+            <li><i>02</i>HULL PLATE<small>5 TIERS</small></li>
+            <li><i>03</i>PRIMARY ARRAY<small>LMB</small></li>
+            <li><i>04</i>PHASE VANES<small>SPACE</small></li>
+            <li><i>05</i>TACTICAL BAY<small>E</small></li>
+            <li><i>06</i>DRIVE NOZZLE<small>THRUST</small></li>
+          </ul>
         </div>
-        <div class="progressLabel"><span>CAMPAIGN STABILITY</span><b id="landingProgressText">0%</b></div>
-        <div class="landingProgress"><i id="landingProgressBar"></i></div>
-        <div class="deckActions">
-          <button id="btnLoadout"><span>◇</span><b>LOADOUT</b><small>Skills & shards</small></button>
-          <button id="btnShop"><span>⌃</span><b>UPGRADES</b><small>Permanent systems</small></button>
-          <button id="btnSettings"><span>⚙</span><b>SETTINGS</b><small>Game & cloud</small></button>
+        <div class="console">
+          <div class="consoleFields">
+            <div><small>CURRENT FRONT</small><b id="landingOperation">OUTER RIM</b></div>
+            <div><small>BEST SCORE</small><b id="landingBest">0</b></div>
+            <div><small>SECTOR ACCESS</small><b id="landingSector">01 / 05</b></div>
+            <div class="stab"><small>CAMPAIGN STABILITY <b id="landingProgressText">0%</b></small><span class="stabBar"><i id="landingProgressBar"></i></span></div>
+          </div>
+          <div class="consoleBtns">
+            <button id="btnLoadout"><b>LOADOUT</b><small>Skills &amp; shards</small></button>
+            <button id="btnShop"><b>UPGRADES</b><small>Permanent systems</small></button>
+            <button id="btnSettings"><b>SETTINGS</b><small>Game &amp; cloud</small></button>
+          </div>
+          <div class="intel"><b>COMBAT INTEL</b><span>Hold the mouse button to sustain fire. Dash through incoming rounds.</span></div>
         </div>
-        <div class="combatTip"><b>COMBAT INTEL</b><span>Hold the mouse button to sustain fire. Dash through incoming rounds.</span></div>
-      </aside>
+      </figure>
     </main>
 
-    <footer class="featureRail"><div class="feats" id="feats"></div><div class="launchFootnote">© TEMPORAL OPERATIONS // ALL SYSTEMS NOMINAL</div></footer>
+    <footer class="mFoot"><div class="feats" id="feats"></div><div class="mFootNote">© TEMPORAL OPERATIONS // ALL SYSTEMS NOMINAL</div></footer>
   </div>
 </div>
-
 <!-- ==================== SECTOR MAP ==================== -->
 <div id="smap" class="screen dim">
   <div class="panel glass">
@@ -1644,7 +1804,7 @@ function refreshTopbar(){
  $('mCredits').textContent=meta.credits.toLocaleString();
  $('mShards').textContent=meta.shards.toLocaleString();
  $('mCores').textContent=meta.cores.toLocaleString();
- $('pilotTag').innerHTML=esc(pilotName())+(meta.paradoxCore?' <span class="paradoxBadge">◈ PARADOX CONQUEROR</span>':'')+(meta.titanCore?' <span class="titanBadge">🔥 TITAN CORE</span>':'')+((meta.bestEternal||0)>0?` <span class="paradoxBadge">∞ ETERNAL ${meta.bestEternal}</span>`:'');$('avInit').textContent=pilotName()[0];
+ $('pilotTag').innerHTML=esc(pilotName())+(meta.paradoxCore?' <span class="paradoxBadge">◈ PARADOX CONQUEROR</span>':'')+(meta.titanCore?' <span class="titanBadge">TITAN CORE</span>':'')+((meta.bestEternal||0)>0?` <span class="paradoxBadge">∞ ETERNAL ${meta.bestEternal}</span>`:'');$('avInit').textContent=pilotName()[0];
  const sectorNames=['OUTER RIM','FORGOTTEN BELT','VOID FIELDS','NEON CITADEL','THE CONVERGENCE'],sectorAccess=Math.max(1,Math.min(5,(meta.unlocked||0)+1)),cleared=Math.max(0,Math.min(5,(meta.cleared||[]).filter(Boolean).length)),stability=meta.titanCore?100:Math.round(cleared/5*100);
  if($('landingBest'))$('landingBest').textContent=Math.max(0,...(meta.best||[0])).toLocaleString();
  if($('landingSector'))$('landingSector').textContent=String(sectorAccess).padStart(2,'0')+' / 05';
@@ -1656,7 +1816,7 @@ function refreshTopbar(){
    const unlocked=!!meta.titanCore,saved=unlocked&&hasTitanClearBuild();
    $('btnEndless').disabled=!unlocked;
    $('btnEndless').classList.toggle('endlessReady',saved);
-   $('btnEndless').innerHTML=unlocked?'∞&nbsp; ENDLESS MODE':'🔒&nbsp; ENDLESS MODE';
+   $('btnEndless').innerHTML=unlocked?'∞&nbsp; ENDLESS MODE':'ENDLESS MODE';
    $('btnEndless').title=saved?'Resume your saved Chronos Titan-winning build in Endless Mode':unlocked?'Start a fresh Endless run with your current permanent upgrades and loadout':'Defeat Chronos Titan to unlock Endless Mode';
  }
 }
@@ -1668,6 +1828,37 @@ const FEATS=[
  ['<path d="M4 12a8 8 0 1 1 2 6"/><path d="M4 18v-6h6"/>','ROGUELITE','No two runs play the same'],
 ];
 $('feats').innerHTML=FEATS.map(f=>`<div class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${f[0]}</svg></div><div><b>${f[1]}</b><span>${f[2]}</span></div></div>`).join('');
+
+/* ---------------- chrono plate: chronograph hand ---------------- */
+(function(){
+  const hand=document.getElementById('coreHand'),menuEl=document.getElementById('menu');
+  if(!hand||!menuEl)return;
+  const cx=240,cy=84;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    hand.setAttribute('transform','rotate(305 '+cx+' '+cy+')');
+    return;
+  }
+  const svg=menuEl.querySelector('.exploded');
+  let angle=305,scale=1,last=performance.now();
+  const setScale=v=>{scale=v;if(svg)svg.classList.toggle('dilated',v!==1)};
+  menuEl.querySelectorAll('[data-dilate]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>setScale(.07));
+    el.addEventListener('mouseleave',()=>setScale(1));
+  });
+  const play=document.getElementById('btnPlay');
+  if(play){
+    play.addEventListener('mouseenter',()=>setScale(7));
+    play.addEventListener('mouseleave',()=>setScale(1));
+  }
+  requestAnimationFrame(function tick(now){
+    const dt=Math.min(100,now-last);last=now;
+    if(menuEl.classList.contains('on')){
+      angle=(angle+dt*.006*scale)%360;
+      hand.setAttribute('transform','rotate('+angle.toFixed(2)+' '+cx+' '+cy+')');
+    }
+    requestAnimationFrame(tick);
+  });
+})();
 
 /* ---------------- leaderboard ---------------- */
 let lbMode='scores',lbReturn='menu';

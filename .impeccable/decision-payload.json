@@ -1,0 +1,130 @@
+{
+  "title": "CHRONO//BREACH — landing redesign",
+  "question": "The roll assigned The Breach Survey for the landing's new visual world. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Breach Survey",
+      "kicker": "THE ROLL",
+      "lineage": "aeronautical sectional charts and deep-water survey plates",
+      "thesis": "The landing is the survey plate of a collapsing timeline: five sectors charted in contour, the breach edge left deliberately unmapped.",
+      "palette": ["#0c1f2e", "#e8e2cf", "#d6467e", "#3fc1d4"],
+      "materials": ["engraved linework on chart stock", "letterpress status stamps", "magenta warning overprint"],
+      "viewport": "A full-plate chart: the wordmark set as the title block, sector contours sweeping toward the unmapped breach edge, the DEPLOY stamp at the pilot's plotted position.",
+      "risk": "Print-plate calm can undersell a fast action game if the contour field stays static.",
+      "raised": [
+        {"from": "orizuru fold sequence", "raise": "A strict numbered plate margin runs the page like fold steps 01–32: one continuous sheet from title block to breach edge."},
+        {"from": "multiplane cel dawn", "raise": "Real depth layers — base plate, overlay acetates, floating instrument layer — with parallax that reduces gracefully on phones."},
+        {"from": "racing league identity", "raise": "Hovering a sector floods the instrumentation with that sector's threat color, and motion leans into a left-to-right velocity axis."},
+        {"from": "Raygun layout desk", "raise": "One earned collision: the wordmark prints straight across the contour field; every other element stays ruled."},
+        {"from": "variable font specimen", "raise": "Title block set enormous against tiny soundings; a live time-dilation control remaps the instability contours in real time."},
+        {"from": "CRT oscilloscope bench", "raise": "Every readout binds to real pilot state, and contour motion carries a persistence trail instead of a dead static plate."}
+      ],
+      "wireframe": {"cols": 12, "rows": 10, "regions": [
+        {"label": "chart marginalia header", "x": 0, "y": 0, "w": 12, "h": 1},
+        {"label": "wordmark title block", "x": 0, "y": 2, "w": 6, "h": 4, "accent": true},
+        {"label": "sector contour field", "x": 5, "y": 1, "w": 7, "h": 7},
+        {"label": "instrumentation column", "x": 8, "y": 2, "w": 4, "h": 5},
+        {"label": "deploy + legend row", "x": 0, "y": 8, "w": 12, "h": 2, "accent": true}
+      ]}
+    },
+    {
+      "id": "model-pick",
+      "label": "The Chronograph Plate",
+      "kicker": "IMPECCABLE'S PICK",
+      "lineage": "Swiss chronograph technical documentation and exploded movement diagrams",
+      "thesis": "The landing is the spec sheet of an instrument built to measure destroyed timelines.",
+      "palette": ["#101418", "#edeae2", "#c8331f", "#8a9099"],
+      "materials": ["engraved exploded-diagram linework", "spec-table hairlines", "signal-red seconds accent"],
+      "viewport": "An exploded ship diagram at hero scale, callout lines naming real combat systems, ENTER THE BREACH set like a part order code.",
+      "risk": "Watch-ad elegance can undersell an arcade riot; also the direction most runs in this category land on.",
+      "wireframe": {"cols": 12, "rows": 10, "regions": [
+        {"label": "spec header strip", "x": 0, "y": 0, "w": 12, "h": 1},
+        {"label": "exploded ship diagram", "x": 0, "y": 1, "w": 8, "h": 8, "accent": true},
+        {"label": "callout spec table", "x": 8, "y": 1, "w": 4, "h": 6},
+        {"label": "order-of-battle actions", "x": 8, "y": 7, "w": 4, "h": 3}
+      ]}
+    },
+    {
+      "id": "challenger-oscilloscope",
+      "label": "The Signal Bench",
+      "verdict": "competitive",
+      "lineage": "CRT oscilloscope on an instrument bench",
+      "thesis": "The breach rendered as a live temporal waveform: phosphor trace on an etched graticule, a trigger knob for a play button.",
+      "palette": ["#0a0f0c", "#3dff9c", "#ffb347", "#9fb4a6"],
+      "materials": ["phosphor persistence on near-black glass", "etched graticule", "detented knob chrome"],
+      "viewport": "A full-screen scope face where the trace draws the breach's temporal signature; pressing play locks the sweep.",
+      "case": "Fuses cleanly: the temporal signature trace IS the product's mechanism, and instrument credibility lands with engineers; loses narrowly on clarity because a scope reads measurement before it reads action.",
+      "risk": "Green glow on black drifts back toward the neon-glow world this redesign replaces.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-oscilloscope-signal-bench-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/scientific-notation-oscilloscope-signal-bench.webp"
+    },
+    {
+      "id": "challenger-orizuru",
+      "label": "The Fold Sequence",
+      "verdict": "declined",
+      "lineage": "origami orizuru step diagrams",
+      "palette": ["#c8362b", "#efe7d8", "#1d1a16"],
+      "materials": ["vermilion washi", "sumi ink notes"],
+      "case": "Loses both axes: the fold sequence has no native tie to piloting a shooter, and the metaphor would need explaining, not feeling.",
+      "kept": "Strict numbered margin discipline; one continuous sheet.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-orizuru-crane-sequence-hero.webp"
+    },
+    {
+      "id": "challenger-multiplane",
+      "label": "The Painted Dawn",
+      "verdict": "declined",
+      "lineage": "multiplane cel-animation",
+      "palette": ["#20301f", "#5d7361", "#e8b463"],
+      "materials": ["gouache planes", "mist depth"],
+      "case": "Loses both axes: it needs fully painted plane art this session cannot produce, and a painted dawn misreads a neon breach shooter.",
+      "kept": "Layered depth with graceful plane reduction.",
+      "hero": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn-hero.webp"
+    },
+    {
+      "id": "challenger-racing",
+      "label": "The Racing League",
+      "verdict": "declined",
+      "lineage": "anti-aliased fictional racing identity",
+      "palette": ["#1c1e22", "#e8ff2e", "#ff6a00"],
+      "materials": ["decal geometry", "matte graphite"],
+      "case": "Loses both axes: the livery energy fits the speed, but it stamps 'racing game' on a time-breach roguelite and reads as skin, not system.",
+      "kept": "Color-flood interaction; a committed left-to-right velocity axis.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-antialiased-racing-league-hero.webp"
+    },
+    {
+      "id": "challenger-raygun",
+      "label": "The Layout Desk",
+      "verdict": "declined",
+      "lineage": "1990s surf-culture music magazine spreads",
+      "palette": ["#141210", "#f0ebe0", "#e0362e"],
+      "materials": ["overprinted black ink", "uncoated stock"],
+      "case": "Loses both axes: colliding columns earn designer awe but break the stat legibility a recruiter scans in fifteen seconds.",
+      "kept": "One earned, controlled collision at the loudest fragment.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-raygun-layout-desk-hero.webp"
+    },
+    {
+      "id": "challenger-specimen",
+      "label": "The Type Specimen",
+      "verdict": "declined",
+      "lineage": "variable-font type specimen microsites",
+      "palette": ["#f5f3ee", "#111111", "#2436c8"],
+      "materials": ["enormous glyph display", "tiny mono labels"],
+      "case": "Loses both axes: it reads as a foundry release rather than a game, and the product would need a paragraph of explaining.",
+      "kept": "Scale-contrast hierarchy; one live control remaps everything.",
+      "hero": "https://impeccable.style/worlds/cards/variable-font-specimen-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What game landings ship — dark stage, neon accents, glowing play button — executed impeccably.",
+    "palette": ["#050814", "#57e9ff", "#ff3df2"],
+    "materials": ["glass panels", "neon glow", "scanlines"],
+    "viewport": "Hero wordmark over an arena glow, a feature trio, and a gradient play CTA.",
+    "risk": "Indistinguishable from every neon roguelite — including the incumbent look this redesign replaces."
+  },
+  "steer": true
+}
