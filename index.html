@@ -114,7 +114,7 @@ button{font-family:inherit}
 .cloudActions{display:flex;gap:8px;flex-wrap:wrap}.cloudActions input{flex:1;min-width:145px;background:#071322;border:1px solid rgba(90,150,200,.45);border-radius:8px;color:#fff;padding:10px;font:700 12px inherit;text-transform:uppercase}
 .cloudActions .btn{padding:9px 12px;font-size:10px}.recoveryCode{margin-top:10px;font:800 12px monospace;color:#ffd85d;overflow-wrap:anywhere}
 .pilotSetup{width:min(520px,92vw);padding:42px;text-align:center}.pilotSetupMark{font-size:11px;font-weight:1000;letter-spacing:.25em;color:var(--cy);margin-bottom:12px}.pilotSetup h2{margin:0;font-size:clamp(30px,5vw,48px);letter-spacing:.08em}.pilotSetup p{color:#9db1c7;line-height:1.65;margin:14px auto 24px;max-width:410px}.pilotSetup input{width:min(330px,100%);background:#071322;border:1px solid rgba(87,233,255,.5);border-radius:10px;color:#fff;padding:14px 18px;font:900 15px inherit;letter-spacing:.13em;text-align:center;text-transform:uppercase;outline:none}.pilotSetup input:focus{border-color:var(--cy);box-shadow:0 0 22px rgba(87,233,255,.2)}.pilotSetup .btnRow{margin-top:18px}.pilotSetupNote{min-height:18px;margin-top:14px;color:#ffd85d;font-size:10px;font-weight:900;letter-spacing:.08em}
-.liveAnnouncement{position:fixed;z-index:30;top:12px;left:50%;transform:translateX(-50%);width:min(720px,92vw);display:none;align-items:center;gap:14px;padding:11px 14px;background:rgba(7,19,34,.96);border:1px solid var(--cy);border-radius:10px;box-shadow:0 10px 35px #0009;color:#dff8ff;font-size:12px}.liveAnnouncement.on{display:flex}.liveAnnouncement.warning{border-color:var(--gd)}.liveAnnouncement.critical{border-color:var(--rd)}.liveAnnouncement.success{border-color:var(--gn)}.liveAnnouncement b{white-space:nowrap;letter-spacing:.1em}.liveAnnouncement span{flex:1;color:#a9c5d6}.liveAnnouncement button{padding:3px 7px;background:none;color:#fff;box-shadow:none}
+.liveAnnouncement{position:fixed;z-index:30;bottom:18px;left:50%;transform:translateX(-50%);width:min(720px,92vw);display:none;align-items:center;gap:14px;padding:11px 14px;background:rgba(7,19,34,.96);border:1px solid var(--cy);border-radius:10px;box-shadow:0 10px 35px #0009;color:#dff8ff;font-size:12px}.liveAnnouncement.on{display:flex}.liveAnnouncement.warning{border-color:var(--gd)}.liveAnnouncement.critical{border-color:var(--rd)}.liveAnnouncement.success{border-color:var(--gn)}.liveAnnouncement b{white-space:nowrap;letter-spacing:.1em}.liveAnnouncement span{flex:1;color:#a9c5d6}.liveAnnouncement button{padding:3px 7px;background:none;color:#fff;box-shadow:none}
 .panel{width:min(880px,94vw);padding:34px 38px}
 /* leaderboard */
 .lbTable{width:100%}
@@ -497,14 +497,14 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .figBody{flex:1;min-height:0;display:grid;background:var(--cb-paper)}
 
 .exploded{display:block;width:100%;max-height:min(56vh,470px);margin:auto;color:var(--cb-ink)}
-.exploded .pl{stroke:var(--cb-ink);fill:none;stroke-width:1.5;stroke-linejoin:miter;stroke-linecap:butt}
-.exploded .pl2{stroke:var(--cb-ink);fill:none;stroke-width:.8;opacity:.5}
-.exploded .axis{stroke:var(--cb-ink);fill:none;stroke-width:1;opacity:.35;stroke-dasharray:12 5 2 5}
-.exploded .hatch{stroke:var(--cb-ink);stroke-width:.7;opacity:.45}
-.exploded .lead{stroke:var(--cb-steel);stroke-width:.8;fill:none;opacity:.85}
-.exploded .dnum{font-family:var(--cb-mono);font-size:12px;font-weight:700;fill:var(--cb-red);letter-spacing:.04em}
-.exploded .dlab{font-family:var(--cb-mono);font-size:12px;font-weight:700;fill:var(--cb-ink);letter-spacing:.04em}
-.exploded .dsub{font-family:var(--cb-mono);font-size:11px;fill:var(--cb-steel);letter-spacing:.02em}
+.exploded .pl{stroke:var(--cb-ink);fill:none;stroke-width:2.2;stroke-linejoin:miter;stroke-linecap:butt}
+.exploded .pl2{stroke:var(--cb-ink);fill:none;stroke-width:1.2;opacity:.65}
+.exploded .axis{stroke:var(--cb-ink);fill:none;stroke-width:1.2;opacity:.4;stroke-dasharray:12 5 2 5}
+.exploded .hatch{stroke:var(--cb-ink);stroke-width:1.0;opacity:.5}
+.exploded .lead{stroke:var(--cb-steel);stroke-width:1.2;fill:none;opacity:.9}
+.exploded .dnum{font-family:var(--cb-mono);font-size:16px;font-weight:700;fill:var(--cb-red);letter-spacing:.04em}
+.exploded .dlab{font-family:var(--cb-mono);font-size:15px;font-weight:700;fill:var(--cb-ink);letter-spacing:.04em}
+.exploded .dsub{font-family:var(--cb-mono);font-size:13px;fill:var(--cb-steel);letter-spacing:.02em}
 .exploded g.figRow{transition:opacity .18s ease;cursor:pointer}
 .exploded:hover g.figRow:not(:hover){opacity:.35}
 #coreHand line{stroke:var(--cb-red);stroke-width:2;stroke-linecap:round}
@@ -712,7 +712,8 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
     <input id="onboardName" maxlength="12" placeholder="PLAYER NAME" autocomplete="nickname" autofocus>
     <div class="btnRow">
       <button class="btn" id="onboardCreate">ENTER THE BREACH</button>
-      <button class="btn ghost" id="onboardRecover">RECOVER EXISTING PILOT</button>
+      <button class="btn ghost" id="onboardSkip">PLAY AS GUEST</button>
+      <button class="btn ghost" id="onboardRecover">RECOVER PILOT</button>
     </div>
     <div class="pilotSetupNote" id="onboardStatus">2–12 LETTERS, NUMBERS, _ OR -</div>
   </div>
@@ -770,7 +771,7 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
       <figure class="figPlate">
         <div class="figHead"><span><b>FIG. 1</b> — FIGHTER, STANDARD CONFIGURATION — EXPLODED VIEW</span><span>NOT TO SCALE</span></div>
         <div class="figBody">
-          <svg class="exploded" viewBox="0 0 680 590" aria-label="Exploded technical diagram of the pilot ship with its labeled combat systems">
+          <svg class="exploded" viewBox="20 0 720 590" aria-label="Exploded technical diagram of the pilot ship with its labeled combat systems">
             <path class="axis draw" style="--d:.05s" pathLength="1" d="M240 18 V572"/>
             <!-- 01 CHRONO CORE -->
             <g class="figRow" data-dilate>
@@ -779,9 +780,9 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
               <circle class="pl2 draw" style="--d:.18s" pathLength="1" cx="240" cy="84" r="30"/>
               <circle cx="240" cy="84" r="5.5" fill="currentColor"/>
               <g id="coreHand"><line x1="240" y1="84" x2="240" y2="51"/><line x1="240" y1="84" x2="240" y2="94" stroke-width="1.4"/><circle cx="240" cy="84" r="2.6"/></g>
-              <path class="lead" d="M286 84 L392 60 H397"/>
-              <text class="dnum" x="403" y="56">01</text><text class="dlab" x="429" y="56">CHRONO CORE</text>
-              <text class="dsub" x="429" y="71">TIME SKILLS [Q] · HOVER TO DILATE</text>
+              <path class="lead" d="M286 84 L392 58 H397"/>
+              <text class="dnum" x="403" y="54">01</text><text class="dlab" x="429" y="54">CHRONO CORE</text>
+              <text class="dsub" x="429" y="72">TIME SKILLS [Q] · HOVER TO DILATE</text>
             </g>
             <!-- 02 HULL PLATE -->
             <g class="figRow">
@@ -789,9 +790,9 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
               <path class="pl draw" style="--d:.22s" pathLength="1" d="M240 168 L258 199 L288 216 L322 260 L322 277 L296 299 L262 313 L240 317 L218 313 L184 299 L158 277 L158 260 L192 216 L222 199 Z"/>
               <path class="pl2" d="M240 168 L258 199 L288 216 L322 260 L322 277 L296 299 L262 313 L240 317 L218 313 L184 299 L158 277 L158 260 L192 216 L222 199 Z" transform="translate(240 242.5) scale(.8) translate(-240 -242.5)"/>
               <g class="hatch"><path d="M224 300l10 10M232 298l10 10M240 296l10 10M248 294l10 10"/></g>
-              <path class="lead" d="M322 268 L392 216 H397"/>
-              <text class="dnum" x="403" y="212">02</text><text class="dlab" x="429" y="212">HULL PLATE</text>
-              <text class="dsub" x="429" y="227">EVOLVES THROUGH 5 TIERS — SCOUT TO APEX</text>
+              <path class="lead" d="M322 268 L392 214 H397"/>
+              <text class="dnum" x="403" y="210">02</text><text class="dlab" x="429" y="210">HULL PLATE</text>
+              <text class="dsub" x="429" y="228">EVOLVES THROUGH 5 TIERS — SCOUT TO APEX</text>
             </g>
             <!-- 03 PRIMARY ARRAY -->
             <g class="figRow">
@@ -800,18 +801,18 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
               <rect class="pl draw" style="--d:.38s" pathLength="1" x="204" y="365" width="13" height="52"/>
               <rect class="pl draw" style="--d:.42s" pathLength="1" x="263" y="365" width="13" height="52"/>
               <path class="pl2" d="M204 371h13M263 371h13M204 411h13M263 411h13"/>
-              <path class="lead" d="M276 384 L392 330 H397"/>
-              <text class="dnum" x="403" y="326">03</text><text class="dlab" x="429" y="326">PRIMARY ARRAY</text>
-              <text class="dsub" x="429" y="341">SUSTAINED FIRE — HOLD LMB</text>
+              <path class="lead" d="M276 384 L392 328 H397"/>
+              <text class="dnum" x="403" y="324">03</text><text class="dlab" x="429" y="324">PRIMARY ARRAY</text>
+              <text class="dsub" x="429" y="342">SUSTAINED FIRE — HOLD LMB</text>
             </g>
             <!-- 04 PHASE VANES -->
             <g class="figRow">
               <path class="pl draw" style="--d:.48s" pathLength="1" d="M240 456 L190 482 L240 488 Z"/>
               <path class="pl draw" style="--d:.52s" pathLength="1" d="M240 456 L290 482 L240 488 Z"/>
               <path class="pl2" d="M240 463 L206 481 L240 485 Z M240 463 L274 481 L240 485 Z"/>
-              <path class="lead" d="M290 478 L392 424 H397"/>
-              <text class="dnum" x="403" y="420">04</text><text class="dlab" x="429" y="420">PHASE VANES</text>
-              <text class="dsub" x="429" y="435">PHASE DASH — SPACE</text>
+              <path class="lead" d="M290 478 L392 422 H397"/>
+              <text class="dnum" x="403" y="418">04</text><text class="dlab" x="429" y="418">PHASE VANES</text>
+              <text class="dsub" x="429" y="436">PHASE DASH — SPACE</text>
             </g>
             <!-- 05 TACTICAL BAY -->
             <g class="figRow">
@@ -819,17 +820,17 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
               <rect class="pl2" x="216" y="519" width="14" height="13"/>
               <rect class="pl2" x="236" y="519" width="14" height="13"/>
               <rect class="pl2" x="256" y="519" width="14" height="13"/>
-              <path class="lead" d="M274 525 L392 490 H397"/>
-              <text class="dnum" x="403" y="486">05</text><text class="dlab" x="429" y="486">TACTICAL BAY</text>
-              <text class="dsub" x="429" y="501">PARRY · PULSE · BURST · BLINK — E</text>
+              <path class="lead" d="M274 525 L392 488 H397"/>
+              <text class="dnum" x="403" y="484">05</text><text class="dlab" x="429" y="484">TACTICAL BAY</text>
+              <text class="dsub" x="429" y="502">PARRY · PULSE · BURST · BLINK — E</text>
             </g>
             <!-- 06 DRIVE NOZZLE -->
             <g class="figRow">
               <path class="pl draw" style="--d:.64s" pathLength="1" d="M224 556 H256 L250 582 H230 Z"/>
               <path class="pl2" d="M232 561 H248 L244 577 H236 Z"/>
-              <path class="lead" d="M256 569 L392 552 H397"/>
-              <text class="dnum" x="403" y="548">06</text><text class="dlab" x="429" y="548">DRIVE NOZZLE</text>
-              <text class="dsub" x="429" y="563">EVASIVE THRUST</text>
+              <path class="lead" d="M256 569 L392 550 H397"/>
+              <text class="dnum" x="403" y="546">06</text><text class="dlab" x="429" y="546">DRIVE NOZZLE</text>
+              <text class="dsub" x="429" y="564">EVASIVE THRUST</text>
             </g>
           </svg>
           <ul class="figLegend">
@@ -1390,7 +1391,7 @@ const cloudSync=(()=>{
   const validCloudName=name=>{name=String(name||'').trim().slice(0,12).toUpperCase();return /^[A-Z0-9_-]{2,12}$/.test(name)&&name!=='ANON'?name:''};
  async function link(name,interactive=false){
   if(linking)return linking;if(token&&status!=='AUTH ERROR')return await sync();if(status==='AUTH ERROR'){token='';localStorage.removeItem(TK)}name=validCloudName(name);if(!name){if(interactive)alert('Callsign must be 2-12 letters, numbers, _ or -.');return false}
-  setStatus('SYNCING');linking=(async()=>{try{const d=await api('/api/v1/pilots',{method:'POST',body:JSON.stringify({displayName:name,importedSave:snapshot()})});token=d.sessionToken;profile=d.profile;recovery=d.recoveryCode;localStorage.setItem(TK,token);localStorage.setItem('chronoName',name);accept(profile,true);setStatus('SYNCED');await sync();return status==='SYNCED'}catch(e){setStatus('OFFLINE');if(interactive)alert(e.message);return false}finally{linking=null}})();return linking;
+  setStatus('SYNCING');linking=(async()=>{try{const d=await api('/api/v1/pilots',{method:'POST',body:JSON.stringify({displayName:name,importedSave:snapshot()})});token=d.sessionToken;profile=d.profile;recovery=d.recoveryCode;localStorage.setItem(TK,token);localStorage.setItem('chronoName',name);accept(profile,true);setStatus('SYNCED');await sync();return status==='SYNCED'}catch(e){setStatus('OFFLINE');if(interactive&&e.code==='CALLSIGN_NOT_ALLOWED')alert('That callsign is not allowed — please choose another.');else if(interactive&&e.status===409)alert('Callsign collision or already claimed.');return false}finally{linking=null}})();return linking;
  }
  async function create(){await link($('cloudName').value||pilotName(),true)}
  async function recover(){const code=prompt('Enter your CHRONO//BREACH recovery code:');if(!code)return false;setStatus('SYNCING');try{const d=await api('/api/v1/pilots/recover',{method:'POST',body:JSON.stringify({recoveryCode:code})});token=d.sessionToken;recovery=d.recoveryCode;localStorage.setItem(TK,token);outbox=[];persist();accept(d.profile,true);localStorage.setItem('chronoName',d.profile.displayName);setStatus('SYNCED');return true}catch(e){setStatus('AUTH ERROR');alert(e.message);return false}}
@@ -1407,9 +1408,57 @@ const cloudSync=(()=>{
  async function fetchAnnouncement(){if(!API)return;try{const d=await api('/api/v1/announcements'),a=d.announcements[0];if(!a)return;const bar=$('liveAnnouncement');bar.className='liveAnnouncement on '+a.severity;$('announcementTitle').textContent=a.title;$('announcementMessage').textContent=a.message;$('announcementClose').onclick=()=>bar.classList.remove('on')}catch(e){}}
  function resume(){if(token)sync();else if(outbox.some(x=>x.type==='run'))link(localStorage.getItem('chronoName'))}
  function finishOnboarding(){setState('MENU');showScreen('menu');refreshTopbar()}
- async function onboard(){const name=$('onboardName').value.trim().slice(0,12).toUpperCase(),button=$('onboardCreate');if(!validCloudName(name)){alert('Callsign must be 2-12 letters, numbers, _ or -.');return}button.disabled=true;button.textContent='REGISTERING…';$('onboardStatus').textContent='CONNECTING TO GLOBAL LEADERBOARD…';const linked=await link(name,true);button.disabled=false;button.textContent='ENTER THE BREACH';$('onboardStatus').textContent=linked?'PILOT LINKED — SCORES WILL SYNC AUTOMATICALLY':'COULD NOT CONNECT — CHECK YOUR CONNECTION';if(linked)finishOnboarding()}
+ async function onboard(){
+  const input=$('onboardName'),name=(input?.value||'').trim().slice(0,12).toUpperCase(),button=$('onboardCreate');
+  if(!validCloudName(name)){
+    $('onboardStatus').textContent='CALLSIGN MUST BE 2–12 LETTERS, NUMBERS, _ OR -';
+    if(input)input.focus();
+    return;
+  }
+  if(button){button.disabled=true;button.textContent='CONNECTING…'}
+  $('onboardStatus').textContent='CONNECTING TO LEADERBOARD…';
+  localStorage.setItem('chronoName',name);
+  renameLocalPilotRecords(name);
+  refreshTopbar();
+  try{
+    const linked=await link(name,false);
+    $('onboardStatus').textContent=linked?'PILOT LINKED — SCORES WILL SYNC AUTOMATICALLY':'OFFLINE MODE ACTIVE — SCORES WILL SYNC WHEN ONLINE';
+  }catch(e){
+    $('onboardStatus').textContent='OFFLINE MODE ACTIVE — SCORES WILL SYNC WHEN ONLINE';
+  }finally{
+    if(button){button.disabled=false;button.textContent='ENTER THE BREACH'}
+    finishOnboarding();
+  }
+ }
+ function onboardSkip(){
+  if(!localStorage.getItem('chronoName')){
+    localStorage.setItem('chronoName','ANON');
+  }
+  refreshTopbar();
+  finishOnboarding();
+ }
  async function onboardRecover(){if(await recover())finishOnboarding()}
-  function init(){$('cloudCreate').onclick=create;$('cloudRecover').onclick=recover;$('cloudSync').onclick=sync;$('cloudRotate').onclick=rotate;$('cloudCopyRecovery').onclick=copyRecovery;$('cloudRequestRecovery').onclick=requestRecoveryAssistance;$('onboardCreate').onclick=onboard;$('onboardRecover').onclick=onboardRecover;$('requiredCallsignSave').onclick=replaceRequiredCallsign;$('requiredCallsign').addEventListener('keydown',e=>{if(e.key==='Enter')replaceRequiredCallsign()});$('onboardName').addEventListener('keydown',e=>{if(e.key==='Enter')onboard()});window.addEventListener('online',resume);renderPanel();fetchAnnouncement();if(token){if(profile?.requiresRename)showRequiredRename();resume()}else setTimeout(()=>{setState('ONBOARDING');showScreen('onboarding');$('onboardName').focus()},0)}
+  function init(){
+    $('cloudCreate').onclick=create;$('cloudRecover').onclick=recover;$('cloudSync').onclick=sync;$('cloudRotate').onclick=rotate;$('cloudCopyRecovery').onclick=copyRecovery;$('cloudRequestRecovery').onclick=requestRecoveryAssistance;
+    $('onboardCreate').onclick=onboard;
+    $('onboardSkip').onclick=onboardSkip;
+    $('onboardRecover').onclick=onboardRecover;
+    $('requiredCallsignSave').onclick=replaceRequiredCallsign;
+    $('requiredCallsign').addEventListener('keydown',e=>{if(e.key==='Enter')replaceRequiredCallsign()});
+    $('onboardName').addEventListener('keydown',e=>{if(e.key==='Enter')onboard()});
+    window.addEventListener('online',resume);
+    renderPanel();
+    fetchAnnouncement();
+    const savedName=localStorage.getItem('chronoName');
+    if(token){
+      if(profile?.requiresRename)showRequiredRename();
+      resume();
+    }else if(savedName){
+      resume();
+    }else{
+      setTimeout(()=>{setState('ONBOARDING');showScreen('onboarding');$('onboardName').focus()},0);
+    }
+  }
  return{init,queueSave,queueRun,claim:name=>link(name),fetchBoard,getBoard:m=>boards[m]||[],boardState:m=>boardStates[m]||'idle',configured:()=>!!API,identity:()=>profile?profile.displayName+'#'+profile.discriminator:null,status:()=>status};
 })();
 window.chronoCloud=cloudSync;cloudSync.init();
