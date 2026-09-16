@@ -408,190 +408,113 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 @media(max-width:860px){.loadoutPanel{padding:20px 18px}.skillSlotGrid{grid-template-columns:1fr}.equippedShardSlots{grid-template-columns:1fr 1fr 1fr}.loadoutFooter{margin:18px -18px -20px;padding-left:18px;padding-right:18px;bottom:-20px}.loadoutTop{align-items:center}.loadoutGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.loadoutPanel{max-height:100vh;width:100vw;border-radius:0;padding:16px 12px}.loadoutGrid,.skillGrid{grid-template-columns:1fr}.equippedShardSlots{grid-template-columns:1fr}.loadoutFooter{margin:16px -12px -16px;padding:12px;bottom:-16px;flex-direction:column;align-items:stretch}.loadoutActions{justify-content:stretch}.loadoutActions .btn{flex:1}.loadoutTop{align-items:flex-start}.loadoutWallet{font-size:11px}}
 
-/* ==================== THE CHRONO PLATE — landing ==================== */
+/* ============ REFINED DARK SCI-FI LANDING (IMPECCABLE) ============ */
 #menu{
-  --cb-paper: #edeae2;
-  --cb-ink: #14161a;
-  --cb-red: #ba2614;
-  --cb-steel: #454d54;
-  --cb-line: rgba(20,22,26,.32);
-  --cb-line2: rgba(20,22,26,.13);
-  --cb-mono: 'Fragment Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
-  --cb-disp: 'Big Shoulders','Arial Narrow','Segoe UI',sans-serif;
-  overflow: auto;
-  padding: 12px;
-  background: var(--cb-paper);
-  color: var(--cb-ink);
-  font-variant-numeric: tabular-nums;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(20,22,26,.4) transparent;
+  overflow:auto;
+  background:linear-gradient(135deg,#02050c 0%,#061124 50%,#02060e 100%);
+  padding:clamp(14px,2.5vw,28px);
 }
-#menu ::selection{background:var(--cb-red);color:#f6f1e6}
-#menu :focus{outline:none}
-#menu :focus-visible{outline:2px solid var(--cb-red);outline-offset:2px}
-#menu::-webkit-scrollbar{width:10px;height:10px}
-#menu::-webkit-scrollbar-thumb{background:rgba(20,22,26,.32);border:3px solid var(--cb-paper)}
-#menu::-webkit-scrollbar-track{background:transparent}
-
-.plateShell{width:min(1560px,100%);min-height:100%;margin:auto;padding:clamp(14px,2.4vh,26px) clamp(18px,3.4vw,56px) clamp(10px,1.8vh,18px);display:flex;flex-direction:column}
-.mHead{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1.5px solid var(--cb-ink)}
-.mBrand{display:flex;align-items:baseline;gap:12px;min-width:0}
-.mBrand b{font-family:var(--cb-disp);font-weight:800;font-size:22px;line-height:1;letter-spacing:.04em;white-space:nowrap}
-.mBrand b .sl{color:var(--cb-red);font-weight:600}
-.mBrand small{font-family:var(--cb-mono);font-size:11px;letter-spacing:.04em;color:var(--cb-steel);white-space:nowrap}
-
-#menu .topbar{position:static;padding:0;display:flex;align-items:center;justify-content:flex-end;gap:0;min-width:0}
-#menu .pilot{display:flex;align-items:center;gap:10px;padding-right:16px;border-right:1px solid var(--cb-line);font-size:12px}
-#menu .pilot .av{width:32px;height:32px;border-radius:2px;background:var(--cb-ink);color:var(--cb-paper);font-family:var(--cb-disp);font-weight:800;font-size:16px;display:grid;place-items:center}
-#menu .pilot>span:last-child{display:grid;gap:2px;min-width:0}
-#menu .pilot small{display:block;font-family:var(--cb-mono);font-size:11px;letter-spacing:.04em;color:var(--cb-steel)}
-#menu .pilot b{display:block;max-width:280px;font-family:var(--cb-mono);font-weight:600;font-size:12px;letter-spacing:.03em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#menu .titanBadge,#menu .paradoxBadge{border-radius:2px;font-family:var(--cb-mono);font-weight:600;text-shadow:none;font-size:11px}
-#menu .titanBadge{border-color:rgba(186,38,20,.55);background:rgba(186,38,20,.08);color:var(--cb-red)}
-#menu .paradoxBadge{border-color:var(--cb-line);background:none;color:var(--cb-ink)}
-#menu .resourceStrip{display:flex;align-items:center}
-#menu .cur{display:grid;gap:2px;min-width:80px;padding:0 14px;border:0;border-right:1px solid var(--cb-line);border-radius:0;background:none}
-#menu .cur small{font-family:var(--cb-mono);font-size:11px;letter-spacing:.04em;color:var(--cb-steel)}
-#menu .cur span{font-family:var(--cb-mono);font-size:13px;font-weight:600;color:var(--cb-ink)}
-#menu .gear{width:36px;height:36px;margin-left:14px;padding:0;border:1px solid var(--cb-line);border-radius:2px;background:none;color:var(--cb-ink);display:grid;place-items:center;cursor:pointer;transition:.15s}
-#menu .gear svg{width:16px;height:16px}
-#menu .gear:hover{border-color:var(--cb-ink);background:var(--cb-ink);color:var(--cb-paper)}
-
-.mMain{flex:1;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(420px,.92fr);gap:clamp(30px,4vw,72px);align-items:center;padding:clamp(20px,3.6vh,48px) 0 clamp(14px,2.4vh,28px)}
-.wordmark{margin:0;font-family:var(--cb-disp);font-weight:800;font-size:clamp(58px,9.2vh,6rem);line-height:.85;letter-spacing:.004em;cursor:pointer}
-.wordmark span{display:block}
-.wordmark .sl{display:inline;color:var(--cb-red);font-weight:600}
-.tagline{display:flex;align-items:center;gap:14px;margin-top:clamp(14px,2.4vh,24px);font-family:var(--cb-mono);font-size:clamp(12px,1.5vh,13px);font-weight:600;letter-spacing:.04em;white-space:nowrap}
-.tagline::after{content:'';flex:1;height:1px;background:var(--cb-line);min-width:30px}
-.lede{max-width:58ch;margin:clamp(10px,1.8vh,16px) 0 0;font-family:var(--cb-mono);font-size:clamp(12px,1.6vh,13.5px);line-height:1.7;color:var(--cb-steel);letter-spacing:.01em}
-.lede b{font-weight:600;color:var(--cb-ink)}
-
-.calFields{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--cb-line);background:var(--cb-line);margin-top:clamp(16px,2.8vh,28px)}
-.calFields div{padding:10px 14px 11px;background:var(--cb-paper);min-width:0}
-.calFields small{display:block;font-family:var(--cb-mono);font-size:11px;letter-spacing:.04em;color:var(--cb-steel)}
-.calFields b{display:block;margin-top:4px;font-family:var(--cb-disp);font-weight:700;font-size:16px;line-height:1.1;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-
-.ctaRow{display:flex;align-items:stretch;gap:10px;margin-top:clamp(18px,3.2vh,30px);flex-wrap:wrap}
-.stampBtn{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--cb-red);border-radius:2px;background:var(--cb-red);color:#f6f1e6;padding:0 clamp(18px,1.8vw,28px);min-height:56px;font-family:var(--cb-disp);font-weight:800;font-size:19px;letter-spacing:.04em;cursor:pointer;transition:background .15s ease,border-color .15s ease,transform .1s ease}
-.stampBtn svg{width:14px;height:14px;fill:currentColor;flex:none}
-.stampBtn:hover{background:#9e1f0e;border-color:#9e1f0e}
-.stampBtn:active{transform:translateY(1px)}
-
-.specBtn{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1.5px solid var(--cb-ink);border-radius:2px;background:transparent;color:var(--cb-ink);padding:0 24px;min-height:56px;font-family:var(--cb-disp);font-weight:700;font-size:15px;letter-spacing:.04em;cursor:pointer;transition:.15s;position:relative}
-.specBtn:hover:not(:disabled){background:var(--cb-ink);color:var(--cb-paper)}
-.specBtn.ng:not(:disabled){border-color:var(--cb-red);color:var(--cb-red)}
-.specBtn.ng:hover:not(:disabled){background:var(--cb-red);color:#f6f1e6}
-#btnEndless:not(:disabled){border-color:var(--cb-red);color:var(--cb-red)}
-#btnEndless:not(:disabled):hover{background:var(--cb-red);color:#f6f1e6}
-#btnEndless:disabled{border:1px dashed var(--cb-line);color:var(--cb-steel);cursor:not-allowed}
-#btnEndless:disabled::after{content:'LOCKED';position:absolute;top:-7px;right:10px;padding:0 6px;background:var(--cb-paper);font-family:var(--cb-mono);font-size:11px;letter-spacing:.04em;color:var(--cb-steel)}
-#btnEndless.endlessReady:not(:disabled)::after{content:'TITAN BUILD';top:-7px;right:10px;border:1px solid rgba(186,38,20,.5);color:var(--cb-red);background:var(--cb-paper);padding:1px 6px;font-size:11px}
-
-.idxNav{display:flex;gap:26px;margin-top:clamp(14px,2.4vh,22px);flex-wrap:wrap}
-.idxNav button{padding:6px 0;border:0;border-bottom:1.5px solid transparent;background:none;cursor:pointer;font-family:var(--cb-mono);font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--cb-steel);transition:.15s}
-.idxNav button:hover{color:var(--cb-ink);border-bottom-color:var(--cb-red)}
-
-.figPlate{position:relative;display:flex;flex-direction:column;margin:0;border:1px solid var(--cb-ink);outline:1px solid var(--cb-line);outline-offset:4px;background:var(--cb-paper)}
-.figHead{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--cb-ink);font-family:var(--cb-mono);font-size:12px;letter-spacing:.04em;color:var(--cb-steel)}
-.figHead b{font-weight:600;color:var(--cb-ink)}
-.figBody{flex:1;min-height:0;display:grid;background:var(--cb-paper)}
-
-.exploded{display:block;width:100%;max-height:min(56vh,470px);margin:auto;color:var(--cb-ink)}
-.exploded .pl{stroke:var(--cb-ink);fill:none;stroke-width:2.2;stroke-linejoin:miter;stroke-linecap:butt}
-.exploded .pl2{stroke:var(--cb-ink);fill:none;stroke-width:1.2;opacity:.65}
-.exploded .axis{stroke:var(--cb-ink);fill:none;stroke-width:1.2;opacity:.4;stroke-dasharray:12 5 2 5}
-.exploded .hatch{stroke:var(--cb-ink);stroke-width:1.0;opacity:.5}
-.exploded .lead{stroke:var(--cb-steel);stroke-width:1.2;fill:none;opacity:.9}
-.exploded .dnum{font-family:var(--cb-mono);font-size:16px;font-weight:700;fill:var(--cb-red);letter-spacing:.04em}
-.exploded .dlab{font-family:var(--cb-mono);font-size:15px;font-weight:700;fill:var(--cb-ink);letter-spacing:.04em}
-.exploded .dsub{font-family:var(--cb-mono);font-size:13px;fill:var(--cb-steel);letter-spacing:.02em}
-.exploded g.figRow{transition:opacity .18s ease;cursor:pointer}
-.exploded:hover g.figRow:not(:hover){opacity:.35}
-#coreHand line{stroke:var(--cb-red);stroke-width:2;stroke-linecap:round}
-#coreHand circle{fill:var(--cb-red)}
-.exploded .coreRed{transition:stroke .2s ease}
-.exploded.dilated .coreRed{stroke:var(--cb-red)}
-
-.figLegend{display:none;list-style:none;margin:0;padding:10px 14px 12px;border-top:1px solid var(--cb-line);grid-template-columns:1fr 1fr;gap:8px 18px}
-.figLegend li{font-family:var(--cb-mono);font-size:12px;letter-spacing:.03em;color:var(--cb-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.figLegend li i{font-style:normal;color:var(--cb-red);font-weight:700;margin-right:7px}
-.figLegend li small{color:var(--cb-steel);font-size:12px;margin-left:6px}
-
-.console{border-top:1px solid var(--cb-ink)}
-.consoleFields{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:1px;background:var(--cb-line);border-bottom:1px solid var(--cb-line)}
-.consoleFields>div{background:var(--cb-paper);padding:9px 14px 10px;min-width:0}
-.consoleFields small{display:block;font-family:var(--cb-mono);font-size:11px;letter-spacing:.04em;color:var(--cb-steel)}
-.consoleFields b{display:block;margin-top:3px;font-family:var(--cb-mono);font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.consoleFields .stab{grid-column:1/-1}
-.consoleFields .stab b{display:inline}
-.stabBar{display:block;height:4px;margin-top:7px;background:rgba(20,22,26,.15);border-radius:1px;overflow:hidden}
-.stabBar i{display:block;width:4%;height:100%;background:var(--cb-red)}
-
-.consoleBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cb-line);border-bottom:1px solid var(--cb-line)}
-.consoleBtns button{border:0;background:var(--cb-paper);padding:11px 14px 12px;text-align:left;cursor:pointer;transition:background .15s, color .15s;min-width:0}
-.consoleBtns button b{display:block;font-family:var(--cb-mono);font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--cb-ink)}
-.consoleBtns button small{display:block;margin-top:3px;font-family:var(--cb-mono);font-size:11px;letter-spacing:.02em;color:var(--cb-steel)}
-.consoleBtns button:hover{background:#dfdbd1;outline:1px solid var(--cb-ink);outline-offset:-1px}
-.consoleBtns button:hover b{color:var(--cb-red)}
-.consoleBtns button:hover small{color:var(--cb-ink)}
-
-.intel{display:flex;gap:10px;align-items:baseline;padding:12px 14px;font-family:var(--cb-mono);font-size:12.5px;line-height:1.55;letter-spacing:.01em;color:var(--cb-steel)}
-.intel b{font-weight:700;letter-spacing:.04em;color:var(--cb-red);white-space:nowrap}
-
-.mFoot{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1.5px solid var(--cb-ink);padding-top:12px;margin-top:auto}
-#menu .feats{display:flex;align-items:center;gap:clamp(14px,2vw,30px);margin:0;flex-wrap:nowrap;min-width:0}
-#menu .feat{display:flex;gap:9px;align-items:center;max-width:190px;min-width:0}
-#menu .feat .fi{width:26px;height:26px;flex:none;border:1px solid var(--cb-line);border-radius:2px;background:none;color:var(--cb-ink);display:grid;place-items:center}
-#menu .feat .fi svg{width:14px;height:14px}
-#menu .feat b{display:block;font-family:var(--cb-mono);font-weight:600;font-size:11px;letter-spacing:.03em;color:var(--cb-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#menu .feat span{display:block;font-family:var(--cb-mono);font-size:12px;color:var(--cb-steel);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
-.mFootNote{flex:none;font-family:var(--cb-mono);font-size:12px;letter-spacing:.03em;color:var(--cb-steel)}
-
-@media(prefers-reduced-motion:no-preference){
-  .exploded .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:cbDraw .9s cubic-bezier(.22,.61,.36,1) forwards;animation-delay:var(--d,0s)}
-  @keyframes cbDraw{to{stroke-dashoffset:0}}
-}
-@media(max-width:1180px){
-  .mMain{grid-template-columns:minmax(0,1fr) minmax(340px,.82fr)}
-  #menu .feats .feat:nth-child(n+4){display:none}
-  .mFootNote{display:none}
-}
-@media(max-width:920px){
-  .mMain{grid-template-columns:1fr;gap:36px}
-  .figPlate{max-width:680px}
-}
-@media(max-width:820px){
-  .mHead{align-items:flex-start}
-  #menu .pilot b{max-width:150px}
-}
-@media(max-width:680px){
-  .mBrand small{display:none}
-  #menu .pilot{padding-right:10px}
-  #menu .cur{min-width:0;padding:0 10px}
-  .mMain{gap:30px}
-  .calFields{grid-template-columns:repeat(2,1fr)}
-  .calFields div:nth-child(2n){border-right:0}
-  .ctaRow{margin-top:20px}
-  .stampBtn{width:100%}
-  .specBtn{flex:1 1 44%}
-  .exploded .dnum,.exploded .dlab,.exploded .dsub,.exploded .lead{display:none}
-  .exploded{max-height:none}
-  .figLegend{display:grid}
-  .consoleFields{grid-template-columns:1fr 1fr}
-  .mFoot{flex-direction:column;align-items:flex-start;gap:10px}
-  #menu .feats{flex-wrap:wrap;gap:12px}
-  #menu .feat span{display:none}
-}
-@media(max-height:820px) and (min-width:921px){
-  .mMain{padding-top:14px;padding-bottom:12px;gap:clamp(24px,3vw,44px)}
-  .wordmark{font-size:clamp(52px,9.6vh,6rem)}
-  .tagline{margin-top:10px}
-  .lede{margin-top:8px;line-height:1.6}
-  .calFields{margin-top:12px}
-  .ctaRow{margin-top:14px}
-  .idxNav{margin-top:12px}
-  .exploded{max-height:min(46vh,400px)}
-  #menu .feat span{display:none}
+#menu.on{display:grid;place-items:stretch}
+.launchShell{position:relative;z-index:1;max-width:1380px;width:100%;margin:0 auto;display:flex;flex-direction:column;min-height:100%}
+.launchHeader{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0 16px;border-bottom:1px solid rgba(87,233,255,.14)}
+.launchLogo{display:flex;align-items:center;gap:14px}
+.launchLogoMark{width:46px;height:46px;border-radius:10px;overflow:hidden;display:grid;place-items:center;border:1px solid rgba(87,233,255,.3);background:#061324}
+.launchLogoMark img{width:100%;height:100%;object-fit:contain}
+.launchLogoText b{font-size:15px;letter-spacing:.04em;color:#fff;display:block}
+.launchLogoText small{font-size:12px;color:#8eb3ce;display:block;margin-top:2px}
+.brandSlash{color:var(--cy);font-style:normal;margin:0 2px}
+#menu .topbar{display:flex;align-items:center;gap:12px}
+#menu .pilot{display:flex;align-items:center;gap:10px;padding-right:14px;border-right:1px solid rgba(87,233,255,.14)}
+#menu .pilot .av{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#57e9ff,#7d69ff);display:grid;place-items:center;font-size:13px;font-weight:900;color:#030d17}
+.pilotMeta small{font-size:11px;color:#8eb3ce;display:block}
+.pilotMeta b{font-size:13px;color:#fff;display:block}
+.resourceStrip{display:flex;align-items:center;gap:8px}
+#menu .cur{display:flex;flex-direction:column;gap:2px;min-width:82px;padding:6px 12px;border-radius:7px;background:rgba(6,18,34,.75);border:1px solid rgba(87,233,255,.2)}
+#menu .cur small{font-size:11px;color:#8eb3ce;font-weight:700}
+#menu .cur span b{font-size:12px;color:#fff;font-weight:800}
+#menu .cur.core small{color:#ffd85d}
+#menu .cur.core span b{color:#ffd85d}
+.gear{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;background:rgba(6,18,34,.75);border:1px solid rgba(87,233,255,.25);color:#dff7ff;cursor:pointer;transition:.15s}
+.gear:hover{border-color:var(--cy);background:rgba(87,233,255,.1)}
+.launchMain{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(330px,.85fr);gap:44px;align-items:center;padding:32px 0 28px;flex:1}
+.hero{position:relative;max-width:760px}
+.heroEyebrow{color:var(--cy);font-size:12px;font-weight:800;letter-spacing:.04em;margin-bottom:14px}
+.brandLockup{position:relative;display:flex;align-items:center;min-height:190px;margin-bottom:16px}
+.brandEmblem{position:absolute;left:-40px;top:50%;transform:translateY(-50%);width:240px;pointer-events:none;opacity:.82}
+.brandEmblem img{width:100%;height:auto;display:block}
+.brandCopy{position:relative;margin-left:clamp(170px,17vw,240px)}
+.brandKicker{color:var(--gd);font-size:12px;font-weight:900;letter-spacing:.04em;margin-bottom:6px}
+.brandTitle{margin:0;font-size:clamp(46px,6.2vw,86px);line-height:.86;font-weight:900;color:#fff;letter-spacing:-.02em}
+.brandTitle .brandSlash{color:var(--cy);font-style:normal}
+.brandSubline{color:#8eb3ce;font-size:12px;font-weight:800;letter-spacing:.04em;margin-top:8px}
+#menu .tagline{color:var(--gd);font-size:14px;font-weight:900;letter-spacing:.04em;margin:18px 0 10px}
+#menu .tag{color:#b3cde0;font-size:13px;line-height:1.65;max-width:640px;margin:0 0 24px}
+.heroActions{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.heroActions .btn{min-height:54px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.04em;display:inline-flex;align-items:center;cursor:pointer;border:0}
+.heroActions .playPrimary{background:linear-gradient(135deg,#57e9ff,#34b8ff);color:#021016;padding:10px 22px;gap:14px;min-width:260px}
+.heroActions .playPrimary:hover{background:linear-gradient(135deg,#7ef0ff,#57e9ff)}
+.playIcon{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#021016;color:#57e9ff;font-size:12px}
+.playCopy{display:flex;flex-direction:column;gap:2px;text-align:left}
+.playCopy small{font-size:11px;color:#063140;font-weight:800}
+.playCopy b{font-size:13px;color:#021016;font-weight:900}
+.heroActions .ghost{background:rgba(6,18,34,.75);color:#dff7ff;border:1px solid rgba(87,233,255,.3);padding:10px 20px}
+.heroActions .ghost:hover{border-color:var(--cy);background:rgba(87,233,255,.1)}
+.heroActions .ghost:disabled{opacity:.45;cursor:not-allowed}
+.secondaryNav{display:flex;gap:20px;flex-wrap:wrap}
+.secondaryNav button{background:none;border:0;padding:6px 0;color:#8eb3ce;font-size:12px;font-weight:800;letter-spacing:.04em;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.secondaryNav button span{color:var(--cy)}
+.secondaryNav button:hover{color:#fff}
+.commandDeck{background:rgba(7,18,34,.88);border:1px solid rgba(87,233,255,.24);border-radius:12px;padding:22px}
+.deckHead{display:flex;justify-content:space-between;align-items:center;color:#8eb3ce;font-size:11px;font-weight:800}
+.netStatus{display:flex;align-items:center;gap:6px;color:#59ff9c}
+.statusDot{width:7px;height:7px;border-radius:50%;background:#59ff9c}
+.operationVisual{position:relative;height:100px;margin:14px -22px 12px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,rgba(87,233,255,.05),rgba(4,10,21,.4))}
+.operationRing{position:relative;width:72px;height:72px;display:grid;place-items:center;border:1px solid rgba(87,233,255,.45);border-radius:50%;animation:ringPulse 3.5s ease-in-out infinite}
+@keyframes ringPulse{50%{transform:scale(1.04);filter:brightness(1.2)}}
+.operationRing::before,.operationRing::after{content:'';position:absolute;width:1px;height:90px;background:linear-gradient(transparent,rgba(87,233,255,.28),transparent)}
+.operationRing::after{transform:rotate(90deg)}
+.operationRing span{font-size:24px;color:var(--cy)}
+.operationScan{position:absolute;width:130px;height:130px;border:1px dashed rgba(167,108,255,.3);border-radius:50%;animation:deckSpin 16s linear infinite}
+@keyframes deckSpin{to{transform:rotate(360deg)}}
+.operationMeta small{font-size:11px;color:#8eb3ce;font-weight:800}
+.operationMeta h2{margin:4px 0 6px;font-size:20px;color:#fff;letter-spacing:.02em}
+.operationMeta p{margin:0;color:#8eb3ce;font-size:12px;line-height:1.5}
+.landingStats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:16px 0;background:rgba(87,233,255,.14);border:1px solid rgba(87,233,255,.14);border-radius:6px;overflow:hidden}
+.landingStats>div{padding:10px;background:#050f1d}
+.landingStats small{font-size:11px;color:#8eb3ce;display:block}
+.landingStats b{font-size:12px;color:#fff;display:block;margin-top:4px}
+.landingStats .readyText{color:#59ff9c}
+.progressLabel{display:flex;justify-content:space-between;color:#8eb3ce;font-size:11px;font-weight:800;margin-bottom:6px}
+.progressLabel b{color:var(--cy)}
+.landingProgress{height:4px;background:#0c1d2e;border-radius:2px;overflow:hidden}
+.landingProgress i{display:block;width:0%;height:100%;background:linear-gradient(90deg,var(--cy),#a76cff)}
+.deckActions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0 14px}
+.deckActions button{padding:10px 8px;border-radius:7px;background:rgba(6,18,34,.8);border:1px solid rgba(87,233,255,.2);color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px}
+.deckActions button:hover{border-color:var(--cy);background:rgba(87,233,255,.12)}
+.deckActions span{color:var(--cy);font-size:14px}
+.deckActions b{font-size:11px;color:#fff}
+.deckActions small{font-size:11px;color:#8eb3ce}
+.combatTip{display:flex;gap:8px;padding-top:12px;border-top:1px solid rgba(87,233,255,.14);font-size:12px;line-height:1.5}
+.combatTip b{color:var(--gd);white-space:nowrap}
+.combatTip span{color:#8eb3ce}
+.featureRail{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0 6px;border-top:1px solid rgba(87,233,255,.14)}
+#menu .feats{display:flex;gap:14px;flex-wrap:wrap}
+#menu .feat{display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:6px;background:rgba(6,18,34,.65);border:1px solid rgba(87,233,255,.14)}
+#menu .feat .fi{width:22px;height:22px;border-radius:4px;background:rgba(87,233,255,.1);display:grid;place-items:center}
+#menu .feat .fi svg{width:14px;height:14px;fill:var(--cy)}
+#menu .feat b{font-size:11px;color:#fff}
+#menu .feat span{font-size:12px;color:#8eb3ce}
+.launchFootnote{color:#8eb3ce;font-size:12px;font-weight:700}
+@media(max-width:1050px){.launchMain{grid-template-columns:1fr;gap:32px}.commandDeck{max-width:600px}}
+@media(max-width:640px){
+  .launchHeader{flex-direction:column;align-items:flex-start}
+  .brandLockup{min-height:160px}
+  .brandEmblem{width:160px;left:-20px}
+  .brandCopy{margin-left:120px}
+  .brandTitle{font-size:42px}
+  .heroActions{flex-direction:column}
+  .heroActions .btn{width:100%;justify-content:center}
+  .featureRail{flex-direction:column;align-items:flex-start}
 }
 
 /* ==================== FOUNDRY + LOADOUT COMMAND UI ==================== */
@@ -729,139 +652,107 @@ button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
   </div>
 </div>
 <div id="menu" class="screen on">
-  <div class="plateShell">
-    <header class="mHead">
-      <div class="mBrand"><b>CHRONO<span class="sl">//</span>BREACH</b><small>TEMPORAL STRIKE DIRECTIVE · PLATE Nº CB-2 · V2.0</small></div>
+  <div class="launchShell">
+    <header class="launchHeader">
+      <div class="launchLogo">
+        <span class="launchLogoMark"><img src="/assets/branding/chrono-breach-icon-48-v1.png" width="48" height="48" alt="Chrono Breach"></span>
+        <div class="launchLogoText">
+          <b>CHRONO<span class="brandSlash">//</span>BREACH</b>
+          <small>LIVE COMBAT NETWORK · V2.0</small>
+        </div>
+      </div>
       <div class="topbar">
-        <div class="pilot"><span class="av" id="avInit">A</span><span><small>ACTIVE PILOT</small><b id="pilotTag">ANON</b></span></div>
+        <div class="pilot">
+          <span class="av" id="avInit">A</span>
+          <div class="pilotMeta">
+            <small>ACTIVE PILOT</small>
+            <b id="pilotTag">ANON</b>
+          </div>
+        </div>
         <div class="resourceStrip">
           <div class="cur"><small>CREDITS</small><span><b id="mCredits">0</b></span></div>
           <div class="cur"><small>SHARDS</small><span><b id="mShards">0</b></span></div>
           <div class="cur core"><small>TITAN CORES</small><span><b id="mCores">0</b></span></div>
         </div>
-        <button class="gear" id="gearBtn" type="button" aria-label="Open settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2.1" fill="var(--cb-paper)"/><circle cx="15" cy="12" r="2.1" fill="var(--cb-paper)"/><circle cx="7" cy="17" r="2.1" fill="var(--cb-paper)"/></svg></button>
+        <button class="gear" id="gearBtn" type="button" aria-label="Open settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="18" height="18"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2.2" fill="#061220"/><circle cx="15" cy="12" r="2.2" fill="#061220"/><circle cx="7" cy="17" r="2.2" fill="#061220"/></svg>
+        </button>
       </div>
     </header>
 
-    <main class="mMain">
-      <section class="titleCol">
-        <h1 class="wordmark" data-dilate aria-label="Chrono Breach V2"><span>CHRONO<i class="sl">//</i></span><span>BREACH</span></h1>
+    <main class="launchMain">
+      <section class="hero">
+        <div class="heroEyebrow">ONLINE ARENA ROGUELITE · V2.0</div>
+        <div class="brandLockup">
+          <div class="brandEmblem" aria-hidden="true">
+            <img src="/assets/branding/chrono-breach-icon-512-v1.png" width="512" height="512" alt="" decoding="async" fetchpriority="high">
+          </div>
+          <div class="brandCopy">
+            <div class="brandKicker">TEMPORAL STRIKE DIRECTIVE</div>
+            <h1 class="brandTitle" aria-label="Chrono Breach"><span>CHRONO</span><i class="brandSlash">//</i><span>BREACH</span></h1>
+            <div class="brandSubline">TEMPORAL SCI-FI ACTION</div>
+          </div>
+        </div>
         <div class="tagline">BEND TIME. BREAK LIMITS. SURVIVE THE BREACH.</div>
-        <p class="lede">A high-speed arena roguelite engineered with browser-native APIs. Dash through projectile swarms, reflect attacks, slow time, evolve your vessel across <b>05 power tiers</b>, and defeat massive boss encounters across <b>05 sectors</b>.</p>
-        <div class="calFields">
-          <div><small>CLASS</small><b>ARENA ROGUELITE</b></div>
-          <div><small>CAMPAIGN</small><b>05 SECTORS · 06 BOSSES</b></div>
-          <div><small>BUILD SYSTEM</small><b>26 UPGRADES · 04 RARITIES</b></div>
-          <div><small>SHIP</small><b>05 EVOLUTION TIERS</b></div>
-          <div><small>HANGAR</small><b>16 MODULES · 08 SHARDS</b></div>
-          <div><small>RECORDS</small><b>OFFLINE + CLOUD</b></div>
+        <p class="tag">A high-speed arena roguelite engineered with browser-native APIs. Dash through projectile swarms, reflect attacks, slow time, evolve your vessel across 05 power tiers, and defeat massive boss encounters across 05 sectors.</p>
+        <div class="heroActions">
+          <button class="btn playPrimary" id="btnPlay">
+            <span class="playIcon" aria-hidden="true">▶</span>
+            <span class="playCopy"><small>BEGIN OPERATION</small><b>ENTER THE BREACH</b></span>
+          </button>
+          <button class="btn ghost endlessLandingBtn" id="btnEndless" disabled title="Defeat Chronos Titan to unlock Endless Mode">ENDLESS MODE</button>
+          <button class="btn ghost" id="btnNGPlus" style="display:none">NEW GAME+</button>
         </div>
-        <div class="ctaRow">
-          <button class="stampBtn" id="btnPlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 19 12 7 19.5Z"/></svg><span>ENTER THE BREACH</span></button>
-          <button class="specBtn endlessLandingBtn" id="btnEndless" disabled title="Defeat Chronos Titan to unlock Endless Mode">ENDLESS MODE</button>
-          <button class="specBtn ng" id="btnNGPlus" style="display:none">NEW GAME+</button>
-        </div>
-        <nav class="idxNav" aria-label="Landing navigation">
-          <button id="btnMap">SECTOR MAP</button>
-          <button id="btnLb">LEADERBOARD</button>
-          <button id="btnHow">HOW TO PLAY</button>
+        <nav class="secondaryNav" aria-label="Quick navigation">
+          <button id="btnMap"><span>01</span> SECTOR MAP</button>
+          <button id="btnLb"><span>02</span> LEADERBOARD</button>
+          <button id="btnHow"><span>03</span> HOW TO PLAY</button>
         </nav>
       </section>
 
-      <figure class="figPlate">
-        <div class="figHead"><span><b>FIG. 1</b> — FIGHTER, STANDARD CONFIGURATION — EXPLODED VIEW</span><span>NOT TO SCALE</span></div>
-        <div class="figBody">
-          <svg class="exploded" viewBox="20 0 720 590" aria-label="Exploded technical diagram of the pilot ship with its labeled combat systems">
-            <path class="axis draw" style="--d:.05s" pathLength="1" d="M240 18 V572"/>
-            <!-- 01 CHRONO CORE -->
-            <g class="figRow" data-dilate>
-              <circle class="pl coreRed draw" style="--d:.1s" pathLength="1" cx="240" cy="84" r="46"/>
-              <circle class="pl2" cx="240" cy="84" r="41" stroke-width="7" stroke-dasharray="1.2 3.093"/>
-              <circle class="pl2 draw" style="--d:.18s" pathLength="1" cx="240" cy="84" r="30"/>
-              <circle cx="240" cy="84" r="5.5" fill="currentColor"/>
-              <g id="coreHand"><line x1="240" y1="84" x2="240" y2="51"/><line x1="240" y1="84" x2="240" y2="94" stroke-width="1.4"/><circle cx="240" cy="84" r="2.6"/></g>
-              <path class="lead" d="M286 84 L392 58 H397"/>
-              <text class="dnum" x="403" y="54">01</text><text class="dlab" x="429" y="54">CHRONO CORE</text>
-              <text class="dsub" x="429" y="72">TIME SKILLS [Q] · HOVER TO DILATE</text>
-            </g>
-            <!-- 02 HULL PLATE -->
-            <g class="figRow">
-              <path class="axis" d="M138 242 H342"/>
-              <path class="pl draw" style="--d:.22s" pathLength="1" d="M240 168 L258 199 L288 216 L322 260 L322 277 L296 299 L262 313 L240 317 L218 313 L184 299 L158 277 L158 260 L192 216 L222 199 Z"/>
-              <path class="pl2" d="M240 168 L258 199 L288 216 L322 260 L322 277 L296 299 L262 313 L240 317 L218 313 L184 299 L158 277 L158 260 L192 216 L222 199 Z" transform="translate(240 242.5) scale(.8) translate(-240 -242.5)"/>
-              <g class="hatch"><path d="M224 300l10 10M232 298l10 10M240 296l10 10M248 294l10 10"/></g>
-              <path class="lead" d="M322 268 L392 214 H397"/>
-              <text class="dnum" x="403" y="210">02</text><text class="dlab" x="429" y="210">HULL PLATE</text>
-              <text class="dsub" x="429" y="228">EVOLVES THROUGH 5 TIERS — SCOUT TO APEX</text>
-            </g>
-            <!-- 03 PRIMARY ARRAY -->
-            <g class="figRow">
-              <path class="axis" d="M186 398 H294"/>
-              <rect class="pl draw" style="--d:.34s" pathLength="1" x="218" y="391" width="44" height="14"/>
-              <rect class="pl draw" style="--d:.38s" pathLength="1" x="204" y="365" width="13" height="52"/>
-              <rect class="pl draw" style="--d:.42s" pathLength="1" x="263" y="365" width="13" height="52"/>
-              <path class="pl2" d="M204 371h13M263 371h13M204 411h13M263 411h13"/>
-              <path class="lead" d="M276 384 L392 328 H397"/>
-              <text class="dnum" x="403" y="324">03</text><text class="dlab" x="429" y="324">PRIMARY ARRAY</text>
-              <text class="dsub" x="429" y="342">SUSTAINED FIRE — HOLD LMB</text>
-            </g>
-            <!-- 04 PHASE VANES -->
-            <g class="figRow">
-              <path class="pl draw" style="--d:.48s" pathLength="1" d="M240 456 L190 482 L240 488 Z"/>
-              <path class="pl draw" style="--d:.52s" pathLength="1" d="M240 456 L290 482 L240 488 Z"/>
-              <path class="pl2" d="M240 463 L206 481 L240 485 Z M240 463 L274 481 L240 485 Z"/>
-              <path class="lead" d="M290 478 L392 422 H397"/>
-              <text class="dnum" x="403" y="418">04</text><text class="dlab" x="429" y="418">PHASE VANES</text>
-              <text class="dsub" x="429" y="436">PHASE DASH — SPACE</text>
-            </g>
-            <!-- 05 TACTICAL BAY -->
-            <g class="figRow">
-              <rect class="pl draw" style="--d:.58s" pathLength="1" x="206" y="512" width="68" height="27"/>
-              <rect class="pl2" x="216" y="519" width="14" height="13"/>
-              <rect class="pl2" x="236" y="519" width="14" height="13"/>
-              <rect class="pl2" x="256" y="519" width="14" height="13"/>
-              <path class="lead" d="M274 525 L392 488 H397"/>
-              <text class="dnum" x="403" y="484">05</text><text class="dlab" x="429" y="484">TACTICAL BAY</text>
-              <text class="dsub" x="429" y="502">PARRY · PULSE · BURST · BLINK — E</text>
-            </g>
-            <!-- 06 DRIVE NOZZLE -->
-            <g class="figRow">
-              <path class="pl draw" style="--d:.64s" pathLength="1" d="M224 556 H256 L250 582 H230 Z"/>
-              <path class="pl2" d="M232 561 H248 L244 577 H236 Z"/>
-              <path class="lead" d="M256 569 L392 550 H397"/>
-              <text class="dnum" x="403" y="546">06</text><text class="dlab" x="429" y="546">DRIVE NOZZLE</text>
-              <text class="dsub" x="429" y="564">EVASIVE THRUST</text>
-            </g>
-          </svg>
-          <ul class="figLegend">
-            <li><i>01</i>CHRONO CORE<small>[Q]</small></li>
-            <li><i>02</i>HULL PLATE<small>5 TIERS</small></li>
-            <li><i>03</i>PRIMARY ARRAY<small>LMB</small></li>
-            <li><i>04</i>PHASE VANES<small>SPACE</small></li>
-            <li><i>05</i>TACTICAL BAY<small>E</small></li>
-            <li><i>06</i>DRIVE NOZZLE<small>THRUST</small></li>
-          </ul>
+      <aside class="commandDeck">
+        <div class="deckHead">
+          <span>ACTIVE OPERATION</span>
+          <span class="netStatus"><i class="statusDot" aria-hidden="true"></i> NETWORK ONLINE</span>
         </div>
-        <div class="console">
-          <div class="consoleFields">
-            <div><small>CURRENT FRONT</small><b id="landingOperation">OUTER RIM</b></div>
-            <div><small>BEST SCORE</small><b id="landingBest">0</b></div>
-            <div><small>SECTOR ACCESS</small><b id="landingSector">01 / 05</b></div>
-            <div class="stab"><small>CAMPAIGN STABILITY <b id="landingProgressText">0%</b></small><span class="stabBar"><i id="landingProgressBar"></i></span></div>
-          </div>
-          <div class="consoleBtns">
-            <button id="btnLoadout"><b>LOADOUT</b><small>Skills &amp; shards</small></button>
-            <button id="btnShop"><b>UPGRADES</b><small>Permanent systems</small></button>
-            <button id="btnSettings"><b>SETTINGS</b><small>Game &amp; cloud</small></button>
-          </div>
-          <div class="intel"><b>COMBAT INTEL</b><span>Hold LMB to sustain fire. Dash through incoming enemy fire to evade damage.</span></div>
+        <div class="operationVisual" aria-hidden="true">
+          <div class="operationRing"><span>⌁</span></div>
+          <div class="operationScan"></div>
         </div>
-      </figure>
+        <div class="operationMeta">
+          <small>CURRENT FRONT</small>
+          <h2 id="landingOperation">OUTER RIM</h2>
+          <p>Hostile temporal signatures detected. Configure your ship systems before deployment.</p>
+        </div>
+        <div class="landingStats">
+          <div><small>BEST SCORE</small><b id="landingBest">0</b></div>
+          <div><small>SECTOR ACCESS</small><b id="landingSector">01 / 05</b></div>
+          <div><small>STATUS</small><b class="readyText">READY</b></div>
+        </div>
+        <div class="progressLabel">
+          <span>CAMPAIGN STABILITY</span>
+          <b id="landingProgressText">0%</b>
+        </div>
+        <div class="landingProgress"><i id="landingProgressBar"></i></div>
+        <div class="deckActions">
+          <button id="btnLoadout"><span>◇</span><b>LOADOUT</b><small>Skills &amp; shards</small></button>
+          <button id="btnShop"><span>⌃</span><b>UPGRADES</b><small>Permanent systems</small></button>
+          <button id="btnSettings"><span>⚙</span><b>SETTINGS</b><small>Game &amp; cloud</small></button>
+        </div>
+        <div class="combatTip">
+          <b>COMBAT INTEL</b>
+          <span>Hold LMB to sustain fire. Dash through incoming enemy fire to evade damage.</span>
+        </div>
+      </aside>
     </main>
 
-    <footer class="mFoot"><div class="feats" id="feats"></div><div class="mFootNote">© TEMPORAL OPERATIONS // ALL SYSTEMS NOMINAL</div></footer>
+    <footer class="featureRail">
+      <div class="feats" id="feats"></div>
+      <div class="launchFootnote">© TEMPORAL OPERATIONS // ALL SYSTEMS NOMINAL</div>
+    </footer>
   </div>
 </div>
+
 <!-- ==================== SECTOR MAP ==================== -->
 <div id="smap" class="screen dim">
   <div class="panel glass">
